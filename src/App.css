@@ -1,0 +1,18 @@
+@font-face {
+  font-family: poppins;
+  src: url(./assets/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: kanit;
+  src: url(./assets/Kanit-SemiBold.ttf);
+}
+.kanit {
+  font-family: kanit;
+}
+.poppins {
+  font-family: poppins;
+}
+.poppins-nav {
+  font-family: poppins;
+  font-size: medium;
+}
