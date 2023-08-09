@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        hoverBlue: "#2979ff",
+        darkBlue: "#0F172A",
+        midBlue: "#60ECBD",
       },
     },
   },
   plugins: [],
-};
+});

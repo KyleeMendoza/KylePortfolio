@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import NavBar from "./screens/NavBar";
-import Home from "./Home";
+import Home from "./screens/Home";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         {/* <Container className="border border-danger">
           <Home />
         </Container> */}
-        {/* <Home /> */}
+        <Home />
       </header>
     </div>
   );
