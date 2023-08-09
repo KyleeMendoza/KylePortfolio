@@ -19,7 +19,7 @@ function NavBar() {
         <div className="flex justify-between items-center px-2">
           <div className="flex items-center text-3xl">
             <img src={Logo} alt="logo" className="w-16 h-16" />
-            <p className="font-sans font-bold text-darkBlue">Kyle</p>
+            <p className="font-['Poppins'] font-bold text-darkBlue">Kyle</p>
           </div>
           <div className="block md:hidden">
             <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -35,7 +35,7 @@ function NavBar() {
           {navData.map((item) => (
             <a
               href={item.path}
-              className="btn-hover font-sans font-bold text-white hover:text-midBlue transition-all ease-in-out md:text-darkBlue"
+              className="btn-hover font-['Poppins'] font-bold text-white hover:text-brightRed transition-all ease-in-out md:text-darkBlue"
             >
               {item.name}
             </a>
