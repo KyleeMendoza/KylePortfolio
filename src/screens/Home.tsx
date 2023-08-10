@@ -74,7 +74,7 @@ function Home() {
           </div>
         </div>
         <div className="flex-1 w-1/2">
-          <img src={gradPic} alt="Picture" width="300" height="200" />
+          {/* <img src={gradPic} alt="Picture" width="300" height="200" /> */}
         </div>
       </div>
     </div>
