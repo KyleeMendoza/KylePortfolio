@@ -41,3 +41,13 @@ html {
 #particles {
   z-index: -1;
 }
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #ff013e;
+  transform-origin: 0%;
+}

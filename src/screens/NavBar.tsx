@@ -18,7 +18,7 @@ function NavBar() {
       <div className="md:flex justify-around items-center md:bg-white drop-shadow-lg">
         <div className="flex justify-between items-center px-2">
           <div className="flex items-center text-3xl">
-            <img src={Logo} alt="logo" className="w-16 h-16" />
+            <img src={Logo} alt="logo" className="w-14 h-14" />
             <p className="font-['Poppins'] font-bold text-darkBlue">Kyle</p>
           </div>
           <div className="block md:hidden">
