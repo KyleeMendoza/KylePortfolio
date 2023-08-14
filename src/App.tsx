@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="relative ">
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <div className="h-screen">
-        <header className="">
+      <div className="flex flex-col h-screen">
+        <header>
           <NavBar />
         </header>
-        <body>
+        <body className="flex justify-center flex-1 items-center ">
           <Home />
         </body>
       </div>
