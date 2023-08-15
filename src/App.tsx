@@ -4,9 +4,13 @@ import "./App.css";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
-import NavBar from "./screens/NavBar";
-import Home from "./screens/Home";
+import NavBar from "./components/NavBar";
 import Particle from "./components/Particle";
+
+import Home from "./screens/Home";
+import About from "./screens/About";
+import Projects from "./screens/Projects";
+import Contact from "./screens/Contact";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -19,7 +23,7 @@ function App() {
   return (
     <div className="relative ">
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-screen" id="home">
         <header>
           <NavBar />
         </header>
@@ -27,17 +31,14 @@ function App() {
           <Home />
         </body>
       </div>
-      <div className="h-screen">
-        <h1>About</h1>
+      <div className="h-[40vh]" id="about">
+        <About />
       </div>
-      <div className="h-screen">
-        <h1>Skills</h1>
+      <div className="h-screen" id="projects">
+        <Projects />
       </div>
-      <div className="h-screen">
-        <h1>Project</h1>
-      </div>
-      <div className="h-screen">
-        <h1>Contact</h1>
+      <div className="h-screen" id="contact">
+        <Contact />
       </div>
       <div className="w-full h-screen absolute top-0 left-0" id="particles">
         <Particle />

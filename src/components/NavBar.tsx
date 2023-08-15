@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
 import Logo from "../assets/logo.png";
-import Menu from "../components/Menu";
+import Menu from "./Menu";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const navData = [
     { path: "#home", name: "Home" },
     { path: "#about", name: "About" },
-    { path: "#skills", name: "Skills" },
     { path: "#projects", name: "Projects" },
     { path: "#contact", name: "Contact" },
   ];

@@ -25,7 +25,7 @@ function Home() {
       "Innovator",
       "Collaborator",
       "Learner",
-      "Problem-solver",
+      "Solver",
       "Tester",
       "Gamer",
     ],
@@ -47,17 +47,17 @@ function Home() {
       h1.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.3 },
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
       });
       h2.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+        transition: { type: "tween", bounce: 0.2, duration: 0.7 },
       });
       heroBg.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.3 },
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
       });
       link.start((i) => ({
         y: 0,
@@ -91,26 +91,13 @@ function Home() {
     }
   }, [inView]);
 
-  // useEffect(() => {
-  //   link.start((i) => ({
-  //     opacity: 1,
-  //     y: 10,
-  //     transition: {
-  //       type: "spring",
-  //       delay: i * 0.3,
-  //       bounce: 0.7,
-  //       duration: 1,
-  //     },
-  //   }));
-  // }, []);
-
   return (
     <div className="flex w-full justify-center items-center">
-      <div ref={ref} className="flex w-[75%] ">
+      <div ref={ref} className="flex w-[75%] border border-2 border-red-600">
         <div className="w-[53%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div animate={h1}>
-            <p className="text-4xl">Hi There,</p>
-            <p className="text-4xl">
+            <p className="home-text ">Hi There,</p>
+            <p className="home-text ">
               I'm a <span className="text-brightRed">{text}</span>{" "}
               <span>
                 <Cursor cursorStyle="<" />
@@ -209,7 +196,7 @@ function Home() {
         </div>
         <motion.div
           animate={heroBg}
-          className="flex-1 relative flex items-center justify-center"
+          className="flex-1 relative flex items-center justify-center "
         >
           <div className="justify-center flex absolute ">
             <img src={formalPic} alt="Picture" className="hero-bg right-0" />
