@@ -31,10 +31,10 @@ function App() {
           <Home />
         </body>
       </div>
-      <div className="h-[40vh]" id="about">
+      <div className="h-[50vh]" id="about">
         <About />
       </div>
-      <div className="h-screen" id="projects">
+      <div className=" glass-bg py-20" id="projects">
         <Projects />
       </div>
       <div className="h-screen" id="contact">

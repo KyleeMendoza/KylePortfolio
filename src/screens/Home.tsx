@@ -93,7 +93,7 @@ function Home() {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div ref={ref} className="flex w-[75%] border border-2 border-red-600">
+      <div ref={ref} className="flex w-[70%] ">
         <div className="w-[53%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div animate={h1}>
             <p className="home-text ">Hi There,</p>

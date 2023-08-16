@@ -1,9 +1,10 @@
 html {
   /* font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300))); */
   font-size: clamp(1rem, 0.6897rem + 0.6897vw, 1.5rem);
+  scroll-behavior: smooth;
 }
 .hero-bg {
-  max-width: calc(100% - 80px);
+  max-width: calc(100% - 120px);
   height: auto;
 }
 .icon-link {
@@ -14,6 +15,14 @@ html {
 .home-text {
   /* font-size: clamp(0.5rem, 12vw + 1rem, 3rem); */
   font-size: clamp(2rem, 0.7586rem + 2.7586vw, 4rem);
+}
+
+.shadow-middle {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-offset {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.8);
 }
 
 .btn-hover {
@@ -58,10 +67,19 @@ html {
 
 .progress-bar {
   position: fixed;
-  bottom: 0;
   left: 0;
   right: 0;
   height: 5px;
   background: #ff013e;
-  transform-origin: 0%;
+  bottom: 0;
+}
+
+.glass-bg {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

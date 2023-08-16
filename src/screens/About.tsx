@@ -62,14 +62,14 @@ function About() {
 
   return (
     <div ref={ref} className="flex h-full justify-center items-center">
-      <div className="w-[50%] font-['Poppins'] text-darkBlue border border-2 border-red-600">
+      <div className="w-[50%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-sm font-bold mb-3 text-brightRed"
           animate={h1}
         >
           ABOUT ME
         </motion.p>
-        <motion.div className="flex flex-col ml-2" animate={h2}>
+        <motion.div className="ml-2" animate={h2}>
           <p className="text-2xl font-bold mb-3 ">
             Aspiring Software Developer
           </p>
