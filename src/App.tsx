@@ -37,7 +37,7 @@ function App() {
       <div className=" glass-bg py-20" id="projects">
         <Projects />
       </div>
-      <div className="h-screen" id="contact">
+      <div className="h-[40vh]" id="contact">
         <Contact />
       </div>
       <div className="w-full h-screen absolute top-0 left-0" id="particles">

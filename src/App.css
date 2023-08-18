@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 .hero-bg {
-  max-width: calc(100% - 120px);
+  max-width: calc(100% - 110px);
   height: auto;
 }
 .icon-link {
@@ -22,7 +22,7 @@ html {
 }
 
 .shadow-offset {
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.8);
 }
 
 .btn-hover {
@@ -67,6 +67,7 @@ html {
 
 .progress-bar {
   position: fixed;
+  z-index: 999;
   left: 0;
   right: 0;
   height: 5px;
@@ -76,10 +77,23 @@ html {
 
 .glass-bg {
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(200, 200, 200, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.groceryBg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("./assets/grocery-bg.png") no-repeat center/cover;
+}
+.OnlineClassBg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("./assets/onlineClassBg.png") no-repeat center/cover;
+}
+.mathBg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("./assets/mathBg.png") no-repeat center/cover;
 }

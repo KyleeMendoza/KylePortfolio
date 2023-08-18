@@ -92,7 +92,7 @@ function Home() {
   }, [inView]);
 
   return (
-    <div className="flex w-full justify-center items-center">
+    <div className="flex w-full justify-center items-center ">
       <div ref={ref} className="flex w-[70%] ">
         <div className="w-[53%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div animate={h1}>
@@ -110,7 +110,7 @@ function Home() {
               aspiring Software Developer based in Pasig, Philippines
             </p>
             <Button className="bg-brightRed my-4 drop-shadow-lg">
-              Download CV
+              About Me
             </Button>
           </motion.div>
           <div className="flex gap-3">

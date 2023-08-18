@@ -90,7 +90,7 @@ const Particle = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 2 },
+            value: { min: 2, max: 4 },
           },
         },
         detectRetina: true,
