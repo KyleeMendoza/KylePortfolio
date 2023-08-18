@@ -92,10 +92,16 @@ function Home() {
   }, [inView]);
 
   return (
-    <div className="flex w-full justify-center items-center ">
-      <div ref={ref} className="flex w-[70%] ">
-        <div className="w-[53%] font-['Poppins'] font-bold text-darkBlue ">
-          <motion.div animate={h1}>
+    <div className="flex w-full justify-center items-center border border-2 border-red-600">
+      <div
+        ref={ref}
+        className="flex flex-col flex-col-reverse lg:flex-row w-[90%] lg:w-[70%] border border-2 border-green-600"
+      >
+        <div className="text-center lg:text-start lg:w-[53%] font-['Poppins'] font-bold text-darkBlue ">
+          <motion.div
+            animate={h1}
+            className="flex lg:block justify-center gap-2 lg:gap-0"
+          >
             <p className="home-text ">Hi There,</p>
             <p className="home-text ">
               I'm a <span className="text-brightRed">{text}</span>{" "}
@@ -113,7 +119,7 @@ function Home() {
               About Me
             </Button>
           </motion.div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-center lg:justify-normal">
             <motion.a
               custom={0}
               animate={link}
@@ -196,9 +202,9 @@ function Home() {
         </div>
         <motion.div
           animate={heroBg}
-          className="flex-1 relative flex items-center justify-center "
+          className="hidden flex-1 lg:relative lg:flex items-center justify-center "
         >
-          <div className="justify-center flex absolute ">
+          <div className="justify-center flex lg:absolute">
             <img src={formalPic} alt="Picture" className="hero-bg right-0" />
           </div>
         </motion.div>

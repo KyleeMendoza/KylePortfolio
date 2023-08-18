@@ -15,7 +15,7 @@ import Logo from "../assets/logoWhite.png";
 
 function Contact() {
   return (
-    <div className="flex flex-col gap-3 h-full items-center justify-center bg-black">
+    <div className="flex flex-col gap-3 h-full items-center justify-center bg-black border border-2 border-red-600">
       <div className="flex w-[75%] font-['Poppins'] font-bold text-white">
         <div className="flex flex-1 flex-col gap-5 items-center justify-center flex-1 ">
           <div className="pt-2 text-xl text-right">
@@ -73,10 +73,10 @@ function Contact() {
             </a>
           </div>
         </div>
-        <div className="flex flex-1 items-center justify-center ">
+        <div className="hidden lg:flex flex-1 items-center justify-center ">
           <div className="flex flex-col">
             <img src={Logo} alt="logo" className="w-24 h-24" />
-            <p className="text-xl">kylemendoza67@gmail.com</p>
+            <p className="text-xl ml-3">kylemendoza67@gmail.com</p>
           </div>
         </div>
       </div>

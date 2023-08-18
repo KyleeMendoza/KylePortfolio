@@ -61,8 +61,11 @@ function About() {
   }, [inView]);
 
   return (
-    <div ref={ref} className="flex h-full justify-center items-center">
-      <div className="w-[50%] font-['Poppins'] text-darkBlue ">
+    <div
+      ref={ref}
+      className="flex h-full justify-center items-center border border-2 border-red-600"
+    >
+      <div className="w-[90%] lg:w-[50%] font-['Poppins'] text-darkBlue border border-2 border-red-600">
         <motion.p
           className="text-sm font-bold mb-3 text-brightRed"
           animate={h1}

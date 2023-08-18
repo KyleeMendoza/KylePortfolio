@@ -31,17 +31,17 @@ function App() {
           <Home />
         </body>
       </div>
-      <div className="h-[50vh]" id="about">
+      <div className="lg:h-[50vh] h-[70vh]" id="about">
         <About />
       </div>
-      <div className=" glass-bg py-20" id="projects">
+      <div className=" glass-bg lg:py-20" id="projects">
         <Projects />
       </div>
       <div className="h-[40vh]" id="contact">
         <Contact />
       </div>
       <div className="w-full h-screen absolute top-0 left-0" id="particles">
-        <Particle />
+        {/* <Particle /> */}
       </div>
     </div>
   );

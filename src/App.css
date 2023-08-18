@@ -97,3 +97,10 @@ html {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
     url("./assets/mathBg.png") no-repeat center/cover;
 }
+
+@media only screen and (max-width: 959px) {
+  .hero-bg {
+    max-width: calc(100% - 450px);
+    height: auto;
+  }
+}

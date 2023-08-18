@@ -23,16 +23,27 @@ function Projects() {
   //   },
   // ];
 
-  const { ref, inView } = useInView({
+  const { ref: refBody, inView: inViewBody } = useInView({
     threshold: 0.2,
+  });
+  const { ref: refCard1, inView: inViewCard1 } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: refCard2, inView: inViewCard2 } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: refCard3, inView: inViewCard3 } = useInView({
+    threshold: 0.5,
   });
 
   const h1 = useAnimation();
   const h2 = useAnimation();
-  const title = useAnimation();
+  const title1 = useAnimation();
+  const title2 = useAnimation();
+  const title3 = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (inViewBody) {
       h1.start({
         x: 0,
         opacity: 1,
@@ -43,14 +54,14 @@ function Projects() {
         opacity: 1,
         transition: { type: "tween", bounce: 0.2, duration: 0.7 },
       });
-      title.start((i) => ({
-        x: 0,
-        opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
-      }));
+      // title.start((i) => ({
+      //   x: 0,
+      //   opacity: 1,
+      //   transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      // }));
     }
 
-    if (!inView) {
+    if (!inViewBody) {
       h1.start({
         x: -50,
         opacity: 0,
@@ -59,16 +70,67 @@ function Projects() {
         x: 50,
         opacity: 0,
       });
-      title.start({
+      // title.start({
+      //   x: 50,
+      //   opacity: 0,
+      // });
+    }
+  }, [inViewBody]);
+
+  useEffect(() => {
+    if (inViewCard1) {
+      title1.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      });
+    }
+
+    if (!inViewCard1) {
+      title1.start({
         x: 50,
         opacity: 0,
       });
     }
-  }, [inView]);
+  }, [inViewCard1]);
+
+  useEffect(() => {
+    if (inViewCard2) {
+      title2.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      });
+    }
+
+    if (!inViewCard2) {
+      title2.start({
+        x: 50,
+        opacity: 0,
+      });
+    }
+  }, [inViewCard2]);
+
+  useEffect(() => {
+    if (inViewCard3) {
+      title3.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      });
+    }
+
+    if (!inViewCard3) {
+      title3.start({
+        x: 50,
+        opacity: 0,
+      });
+    }
+  }, [inViewCard3]);
 
   return (
-    <div ref={ref} className="flex justify-center items-center ">
-      <div className="w-[75%] font-['Poppins'] text-darkBlue ">
+    <div ref={refBody} className="flex justify-center items-center ">
+      <div className="w-[90%] lg:w-[75%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-sm font-bold mb-3 text-brightRed"
           animate={h1}
@@ -76,26 +138,24 @@ function Projects() {
           PROJECTS
         </motion.p>
 
-        <div className="ml-2 ">
+        <div className="lg:ml-2 ">
           <motion.p className="text-2xl font-bold " animate={h2}>
             Each Project has a unique piece of development
           </motion.p>
 
-          <div className="flex py-20 px-16 rounded-lg my-10 shadow-middle groceryBg">
+          <div
+            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle groceryBg"
+            ref={refCard1}
+          >
             <div className="flex-1"></div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
-                animate={title}
-                custom={0}
+                animate={title1}
               >
                 E-commerce website
               </motion.p>
-              <motion.p
-                className="my-3 text-sm text-white"
-                animate={title}
-                custom={0}
-              >
+              <motion.p className="my-3 text-sm text-white" animate={title1}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
                 rem sapiente ad totam id eum assumenda maiores quidem voluptates
@@ -112,27 +172,25 @@ function Projects() {
                   JavaScript
                 </div>
               </div>
-              <div className="flex items-center justify-center font-bold gap-1 mt-2 text-sm text-white">
+              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
                 <a href="https://github.com/">Preview</a>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </div>
             </div>
           </div>
-          <div className="flex py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg">
+          <div
+            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
+            ref={refCard2}
+          >
             <div className="flex-1"></div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
-                animate={title}
-                custom={1}
+                animate={title2}
               >
                 Tutor Finding App
               </motion.p>
-              <motion.p
-                className="my-3 text-sm text-white"
-                animate={title}
-                custom={1}
-              >
+              <motion.p className="my-3 text-sm text-white" animate={title2}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
                 rem sapiente ad totam id eum assumenda maiores quidem voluptates
@@ -149,22 +207,25 @@ function Projects() {
                   Tailwind
                 </div>
               </div>
-              <div className="flex items-center justify-center font-bold gap-1 mt-2 text-sm text-white">
+              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
                 <a href="https://github.com/">Preview</a>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </div>
             </div>
           </div>
-          <div className="flex py-20 px-16 rounded-lg my-10 shadow-middle mathBg">
+          <div
+            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle mathBg"
+            ref={refCard3}
+          >
             <div className="flex-1"></div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
-                animate={title}
+                animate={title3}
               >
                 Math Quiz Mobile App
               </motion.p>
-              <motion.p className="my-3 text-sm text-white" animate={title}>
+              <motion.p className="my-3 text-sm text-white" animate={title3}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
                 rem sapiente ad totam id eum assumenda maiores quidem voluptates
@@ -178,7 +239,7 @@ function Projects() {
                   SQL
                 </div>
               </div>
-              <div className="flex items-center justify-center font-bold gap-1 mt-2 text-sm text-white">
+              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
                 <a href="https://github.com/">Preview</a>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </div>
