@@ -3,6 +3,9 @@ html {
   font-size: clamp(1rem, 0.6897rem + 0.6897vw, 1.5rem);
   scroll-behavior: smooth;
 }
+/* .scrollable {
+  scroll-behavior: smooth;
+} */
 .hero-bg {
   max-width: calc(100% - 110px);
   height: auto;
@@ -14,7 +17,7 @@ html {
 
 .home-text {
   /* font-size: clamp(0.5rem, 12vw + 1rem, 3rem); */
-  font-size: clamp(2rem, 0.7586rem + 2.7586vw, 4rem);
+  font-size: clamp(2.5rem, 2.1897rem + 0.6897vw, 3rem);
 }
 
 .shadow-middle {
@@ -96,6 +99,40 @@ html {
 .mathBg {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
     url("./assets/mathBg.png") no-repeat center/cover;
+}
+
+.growDown {
+  animation: growDown 600ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.growUp {
+  animation: growUp 600ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes growUp {
+  100% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  0% {
+    transform: scaleY(0);
+  }
 }
 
 @media only screen and (max-width: 959px) {

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Button, IconButton } from "@material-tailwind/react";
+import React, { useEffect, useState } from "react";
+import { button, Button, IconButton } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, useAnimation, useAnimationControls } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -17,6 +17,8 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import formalPic from "../assets/bg-hero.png";
 
 function Home() {
+  const [buttonSize, setButtonSize] = useState<"sm" | "lg">("lg"); //size of icon button social links
+
   const [text] = useTypewriter({
     words: [
       "Developer",
@@ -91,35 +93,65 @@ function Home() {
     }
   }, [inView]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        // Adjust this breakpoint as needed
+        setButtonSize("sm");
+      } else {
+        setButtonSize("lg");
+      }
+    };
+
+    handleResize(); // Set initial size
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="flex w-full justify-center items-center border border-2 border-red-600">
+    <div className="flex w-full h-full justify-center items-center ">
       <div
         ref={ref}
-        className="flex flex-col flex-col-reverse lg:flex-row w-[90%] lg:w-[70%] border border-2 border-green-600"
+        className="flex flex-col flex-col-reverse lg:flex-row w-[100%] lg:w-[70%] "
       >
-        <div className="text-center lg:text-start lg:w-[53%] font-['Poppins'] font-bold text-darkBlue ">
+        <div className="flex flex-col gap-1 lg:gap-0 items-center lg:items-start text-center lg:text-start lg:w-[53%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div
             animate={h1}
-            className="flex lg:block justify-center gap-2 lg:gap-0"
+            className="flex flex-col lg:block justify-center gap-2 lg:gap-0"
           >
-            <p className="home-text ">Hi There,</p>
             <p className="home-text ">
+              Hi There, <span className="home-text lg:hidden">I'm a </span>
+            </p>
+            <p className="home-text hidden lg:block">
               I'm a <span className="text-brightRed">{text}</span>{" "}
               <span>
                 <Cursor cursorStyle="<" />
               </span>{" "}
             </p>
-          </motion.div>
-          <motion.div animate={h2}>
-            <p className="text-md font-semibold mt-4">
-              I'm <span className="text-brightRed">Kyle Mendoza</span>, an
-              aspiring Software Developer based in Pasig, Philippines
+            <p className="home-text text-brightRed lg:hidden">
+              {text}
+              <span>
+                <Cursor cursorStyle="<" />
+              </span>{" "}
             </p>
-            <Button className="bg-brightRed my-4 drop-shadow-lg">
-              About Me
-            </Button>
           </motion.div>
-          <div className="flex gap-3 justify-center lg:justify-normal">
+          <motion.div animate={h2} className=" w-3/4 lg:w-auto">
+            <p className="text-md font-semibold mt-4">
+              I'm <span className="text-brightRed">Kyle Mendoza</span> Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Voluptatum at
+              veniam rerum blanditiis nisi esse animi dicta minus!
+            </p>
+            <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6 ">
+              <div className="transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase">
+                About Me
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="flex gap-3 justify-center lg:justify-normal ">
             <motion.a
               custom={0}
               animate={link}
@@ -128,7 +160,7 @@ function Home() {
             >
               <IconButton
                 className="rounded-full block hover:bg-[#1877F2] hover:scale-125 "
-                size="lg"
+                size={buttonSize}
               >
                 <FontAwesomeIcon icon={faFacebook} className="flex text-lg" />
               </IconButton>
@@ -141,7 +173,7 @@ function Home() {
             >
               <IconButton
                 className="rounded-full block hover:bg-[#1DA1F2] hover:scale-125"
-                size="lg"
+                size={buttonSize}
               >
                 <FontAwesomeIcon icon={faTwitter} className="flex text-lg" />
               </IconButton>
@@ -154,7 +186,7 @@ function Home() {
             >
               <IconButton
                 className="rounded-full block hover:bg-gradient-to-r from-[#F56040] via-[#E1306C] to-[#833AB4] hover:scale-125"
-                size="lg"
+                size={buttonSize}
               >
                 <FontAwesomeIcon icon={faInstagram} className="flex text-lg" />
               </IconButton>
@@ -167,7 +199,7 @@ function Home() {
             >
               <IconButton
                 className="rounded-full block hover:bg-[#0077b5] hover:scale-125"
-                size="lg"
+                size={buttonSize}
               >
                 <FontAwesomeIcon icon={faLinkedin} className="flex text-lg" />
               </IconButton>
@@ -180,7 +212,7 @@ function Home() {
             >
               <IconButton
                 className="rounded-full block hover:scale-125"
-                size="lg"
+                size={buttonSize}
               >
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </IconButton>
@@ -193,7 +225,7 @@ function Home() {
             >
               <IconButton
                 className="rounded-full block hover:scale-125"
-                size="lg"
+                size={buttonSize}
               >
                 <FontAwesomeIcon icon={faMedium} className="flex text-lg" />
               </IconButton>

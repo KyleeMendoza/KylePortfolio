@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button, IconButton } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,11 +14,31 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../assets/logoWhite.png";
 
 function Contact() {
+  const [buttonSize, setButtonSize] = useState<"sm" | "lg">("lg"); //size of icon button social links
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        // Adjust this breakpoint as needed
+        setButtonSize("sm");
+      } else {
+        setButtonSize("lg");
+      }
+    };
+
+    handleResize(); // Set initial size
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col gap-3 h-full items-center justify-center bg-black border border-2 border-red-600">
-      <div className="flex w-[75%] font-['Poppins'] font-bold text-white">
+    <div className="flex flex-col gap-3 h-full items-center justify-center bg-black ">
+      <div className="flex w-full lg:w-[75%] font-['Poppins'] font-bold text-white">
         <div className="flex flex-1 flex-col gap-5 items-center justify-center flex-1 ">
-          <div className="pt-2 text-xl text-right">
+          <div className="pt-2 text-xl text-center lg:text-start lg:text-right">
             <p>Feel free to hit me up. I'm looking</p>
             <p>forward to hearing from you.</p>
           </div>
@@ -27,7 +47,10 @@ function Contact() {
               href="https://www.facebook.com/shaclonely"
               className="drop-shadow-lg"
             >
-              <IconButton className="rounded-full block bg-black" size="lg">
+              <IconButton
+                className="rounded-full block bg-black"
+                size={buttonSize}
+              >
                 <FontAwesomeIcon icon={faFacebook} className="flex text-lg" />
               </IconButton>
             </a>
@@ -35,7 +58,10 @@ function Contact() {
               href="https://twitter.com/kdmendoza00"
               className="drop-shadow-lg"
             >
-              <IconButton className="rounded-full block bg-black" size="lg">
+              <IconButton
+                className="rounded-full block bg-black"
+                size={buttonSize}
+              >
                 <FontAwesomeIcon icon={faTwitter} className="flex text-lg" />
               </IconButton>
             </a>
@@ -43,7 +69,10 @@ function Contact() {
               href="https://www.instagram.com/kyleemndz/"
               className="drop-shadow-lg"
             >
-              <IconButton className="rounded-full block bg-black" size="lg">
+              <IconButton
+                className="rounded-full block bg-black"
+                size={buttonSize}
+              >
                 <FontAwesomeIcon icon={faInstagram} className="flex text-lg" />
               </IconButton>
             </a>
@@ -51,7 +80,10 @@ function Contact() {
               href="https://www.linkedin.com/in/kyleemendoza"
               className="drop-shadow-lg"
             >
-              <IconButton className="rounded-full block bg-black" size="lg">
+              <IconButton
+                className="rounded-full block bg-black"
+                size={buttonSize}
+              >
                 <FontAwesomeIcon icon={faLinkedin} className="flex text-lg" />
               </IconButton>
             </a>
@@ -59,7 +91,7 @@ function Contact() {
               href="https://github.com/KyleeMendoza"
               className="drop-shadow-lg"
             >
-              <IconButton className="rounded-full bg-black" size="lg">
+              <IconButton className="rounded-full bg-black" size={buttonSize}>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </IconButton>
             </a>
@@ -67,7 +99,7 @@ function Contact() {
               href="https://medium.com/@kylemendoza67"
               className="drop-shadow-lg"
             >
-              <IconButton className="rounded-full bg-black" size="lg">
+              <IconButton className="rounded-full bg-black" size={buttonSize}>
                 <FontAwesomeIcon icon={faMedium} className="flex text-lg" />
               </IconButton>
             </a>
@@ -81,7 +113,7 @@ function Contact() {
         </div>
       </div>
       <div>
-        <a href="/home">
+        <a href="#">
           <IconButton
             className="p-4 rounded-full bg-black block border border-2 border-white"
             size="lg"
@@ -90,7 +122,7 @@ function Contact() {
           </IconButton>
         </a>
       </div>
-      <div className="text-white text-xs">
+      <div className="text-white text-center text-xs">
         <p>
           2023 - Kyle Mendoza's Website Portfolio. Philippines{" "}
           <span>&copy;</span> All rights reserved.

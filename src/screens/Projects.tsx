@@ -155,7 +155,10 @@ function Projects() {
               >
                 E-commerce website
               </motion.p>
-              <motion.p className="my-3 text-sm text-white" animate={title1}>
+              <motion.p
+                className="my-3 text-sm text-white text-center lg:text-start"
+                animate={title1}
+              >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
                 rem sapiente ad totam id eum assumenda maiores quidem voluptates
@@ -190,7 +193,10 @@ function Projects() {
               >
                 Tutor Finding App
               </motion.p>
-              <motion.p className="my-3 text-sm text-white" animate={title2}>
+              <motion.p
+                className="my-3 text-sm text-white text-center lg:text-start"
+                animate={title2}
+              >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
                 rem sapiente ad totam id eum assumenda maiores quidem voluptates
@@ -225,7 +231,10 @@ function Projects() {
               >
                 Math Quiz Mobile App
               </motion.p>
-              <motion.p className="my-3 text-sm text-white" animate={title3}>
+              <motion.p
+                className="my-3 text-sm text-white text-center lg:text-start"
+                animate={title3}
+              >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
                 rem sapiente ad totam id eum assumenda maiores quidem voluptates

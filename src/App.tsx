@@ -21,7 +21,7 @@ function App() {
   });
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="flex flex-col h-screen" id="home">
         <header>
@@ -34,14 +34,14 @@ function App() {
       <div className="lg:h-[50vh] h-[70vh]" id="about">
         <About />
       </div>
-      <div className=" glass-bg lg:py-20" id="projects">
+      <div className=" glass-bg pt-10 lg:py-20" id="projects">
         <Projects />
       </div>
-      <div className="h-[40vh]" id="contact">
+      <div className="h-[50vh] lg:h-[40vh]" id="contact">
         <Contact />
       </div>
       <div className="w-full h-screen absolute top-0 left-0" id="particles">
-        {/* <Particle /> */}
+        <Particle />
       </div>
     </div>
   );

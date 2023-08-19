@@ -61,11 +61,8 @@ function About() {
   }, [inView]);
 
   return (
-    <div
-      ref={ref}
-      className="flex h-full justify-center items-center border border-2 border-red-600"
-    >
-      <div className="w-[90%] lg:w-[50%] font-['Poppins'] text-darkBlue border border-2 border-red-600">
+    <div ref={ref} className="flex h-full justify-center items-center ">
+      <div className="w-[90%] lg:w-[50%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-sm font-bold mb-3 text-brightRed"
           animate={h1}
@@ -76,7 +73,7 @@ function About() {
           <p className="text-2xl font-bold mb-3 ">
             Aspiring Software Developer
           </p>
-          <p className="text-xs mb-3">
+          <p className="text-xs mb-3 text-center lg:text-start">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
             natus dolor expedita fuga quaerat ipsam voluptates obcaecati nostrum
             vero sapiente, laboriosam recusandae odio aliquid incidunt itaque.
