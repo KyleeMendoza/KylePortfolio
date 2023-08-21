@@ -117,7 +117,7 @@ function Home() {
         ref={ref}
         className="flex flex-col flex-col-reverse lg:flex-row w-[100%] lg:w-[70%] "
       >
-        <div className="flex flex-col gap-1 lg:gap-0 items-center lg:items-start text-center lg:text-start lg:w-[53%] font-['Poppins'] font-bold text-darkBlue ">
+        <div className="flex flex-col gap-1 lg:gap-0 items-center z-[-1] lg:z-0 lg:items-start text-center lg:text-start lg:w-[53%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div
             animate={h1}
             className="flex flex-col lg:block justify-center gap-2 lg:gap-0"
@@ -151,7 +151,7 @@ function Home() {
             </div>
           </motion.div>
 
-          <div className="flex gap-3 justify-center lg:justify-normal ">
+          <div className="flex gap-3 justify-center lg:justify-normal z-[-1] lg:z-0">
             <motion.a
               custom={0}
               animate={link}

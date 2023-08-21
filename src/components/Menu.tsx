@@ -21,6 +21,7 @@ function Menu({ isOpen, setIsOpen }: MenuProps) {
           //     // close a menu
           //   }
           // }}
+          color="white"
         />
       </div>
     </div>

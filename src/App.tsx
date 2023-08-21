@@ -41,7 +41,7 @@ function App() {
         <Contact />
       </div>
       <div className="w-full h-screen absolute top-0 left-0" id="particles">
-        <Particle />
+        {/* <Particle /> */}
       </div>
     </div>
   );
