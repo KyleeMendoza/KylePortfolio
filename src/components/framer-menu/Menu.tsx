@@ -10,19 +10,7 @@ function Menu({ isOpen, setIsOpen }: MenuProps) {
   return (
     <div>
       <div>
-        <Hamburger
-          toggled={isOpen}
-          toggle={setIsOpen}
-          rounded
-          // onToggle={(toggled) => {
-          //   if (toggled) {
-          //     // open a menu
-          //   } else {
-          //     // close a menu
-          //   }
-          // }}
-          color="white"
-        />
+        <Hamburger toggled={isOpen} toggle={setIsOpen} rounded color="white" />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion, useAnimation, useAnimationControls } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import groceryBg from "../assets/grocery-bg.png";
+import ecommerce from "../assets/ecommerce.png";
 
 function Projects() {
   // const projectData = [
@@ -144,10 +145,10 @@ function Projects() {
           </motion.p>
 
           <div
-            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle groceryBg"
+            className="flex flex-col gap-4 lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle groceryBg "
             ref={refCard1}
           >
-            <div className="flex-1"></div>
+            <div className="flex-1 rounded-lg ecommerceBg"></div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
@@ -176,16 +177,18 @@ function Projects() {
                 </div>
               </div>
               <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
-                <a href="https://github.com/">Preview</a>
+                <a href="https://github.com/KyleeMendoza/E-commerce-Website-with-Admin-and-Database">
+                  Preview
+                </a>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </div>
             </div>
           </div>
           <div
-            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
+            className="flex flex-col gap-4 lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
             ref={refCard2}
           >
-            <div className="flex-1"></div>
+            <div className="flex-1 rounded-lg taguroBg"></div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
@@ -214,7 +217,9 @@ function Projects() {
                 </div>
               </div>
               <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
-                <a href="https://github.com/">Preview</a>
+                <a href="https://github.com/KyleeMendoza/firebaseWebrtc">
+                  Preview
+                </a>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </div>
             </div>
@@ -249,7 +254,9 @@ function Projects() {
                 </div>
               </div>
               <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
-                <a href="https://github.com/">Preview</a>
+                <a href="https://github.com/KyleeMendoza/MATHMAGICIANS---Mobile-App">
+                  Preview
+                </a>
                 <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
               </div>
             </div>

@@ -145,9 +145,12 @@ function Home() {
               veniam rerum blanditiis nisi esse animi dicta minus!
             </p>
             <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6 ">
-              <div className="transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase">
+              <a
+                href="#about"
+                className="transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
+              >
                 About Me
-              </div>
+              </a>
             </div>
           </motion.div>
 

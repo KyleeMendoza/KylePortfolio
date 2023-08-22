@@ -11,13 +11,31 @@ const variants = {
   },
 };
 
-export const Navigation = () => (
-  <motion.ul
-    variants={variants}
-    className="absolute right-0 top-24 w-full z-10 border border-2 border-blue-600"
-  >
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+interface NavigationProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void; // Adjust the type of setIsOpen based on your actual prop type
+}
+
+const navData = [
+  { path: "#home", name: "Home" },
+  { path: "#about", name: "About" },
+  { path: "#projects", name: "Projects" },
+  { path: "#contact", name: "Contact" },
+];
+
+export const Navigation: React.FC<NavigationProps> = ({
+  setIsOpen,
+  isOpen,
+}) => (
+  <motion.ul variants={variants} className="absolute right-0 top-16 w-full">
+    {navData.map((item, key) => (
+      <MenuItem
+        name={item.name}
+        path={item.path}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        key={key}
+      />
     ))}
   </motion.ul>
 );
