@@ -32,7 +32,9 @@ export const HamburgerMenu = () => {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="absolute right-0 top-0 w-full h-screen border border-2 border-green-600"
+      className={`${
+        isOpen ? "z-20" : "z-10"
+      } absolute right-0 top-0 w-full h-screen border border-2`}
     >
       <motion.div
         className="absolute right-0 top-0 bottom-0 w-full bg-darkBlue"

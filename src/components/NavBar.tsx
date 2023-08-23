@@ -23,7 +23,7 @@ function NavBar() {
               <img src={Logo} alt="logo" className="w-14 h-14" />
               <p className="font-['Poppins'] font-bold text-darkBlue">Kyle</p>
             </div>
-            <div className="block lg:hidden">
+            <div className="block lg:hidden ">
               {/* <Menu isOpen={isOpen} setIsOpen={setIsOpen} /> */}
               <HamburgerMenu />
             </div>

@@ -106,6 +106,9 @@ html {
 .taguroBg {
   background: url("./assets/taguroApp.png") no-repeat center/cover;
 }
+.mathAppBg {
+  background: url("./assets/mathApp.png") no-repeat center/cover;
+}
 
 /* .growDown {
   animation: growDown 600ms ease-in-out forwards;

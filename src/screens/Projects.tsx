@@ -5,6 +5,8 @@ import { motion, useAnimation, useAnimationControls } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import groceryBg from "../assets/grocery-bg.png";
 import ecommerce from "../assets/ecommerce.png";
+import mathAppBg from "../assets/mathApp.png";
+import taguroAppBg from "../assets/taguroApp.png";
 
 function Projects() {
   // const projectData = [
@@ -42,6 +44,9 @@ function Projects() {
   const title1 = useAnimation();
   const title2 = useAnimation();
   const title3 = useAnimation();
+  const card1 = useAnimation();
+  const card2 = useAnimation();
+  const card3 = useAnimation();
 
   useEffect(() => {
     if (inViewBody) {
@@ -80,6 +85,11 @@ function Projects() {
 
   useEffect(() => {
     if (inViewCard1) {
+      card1.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      });
       title1.start({
         x: 0,
         opacity: 1,
@@ -88,6 +98,10 @@ function Projects() {
     }
 
     if (!inViewCard1) {
+      card1.start({
+        x: -50,
+        opacity: 0,
+      });
       title1.start({
         x: 50,
         opacity: 0,
@@ -97,6 +111,11 @@ function Projects() {
 
   useEffect(() => {
     if (inViewCard2) {
+      card2.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      });
       title2.start({
         x: 0,
         opacity: 1,
@@ -105,6 +124,10 @@ function Projects() {
     }
 
     if (!inViewCard2) {
+      card2.start({
+        x: -50,
+        opacity: 0,
+      });
       title2.start({
         x: 50,
         opacity: 0,
@@ -114,6 +137,11 @@ function Projects() {
 
   useEffect(() => {
     if (inViewCard3) {
+      card3.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+      });
       title3.start({
         x: 0,
         opacity: 1,
@@ -122,6 +150,10 @@ function Projects() {
     }
 
     if (!inViewCard3) {
+      card3.start({
+        x: -50,
+        opacity: 0,
+      });
       title3.start({
         x: 50,
         opacity: 0,
@@ -148,7 +180,14 @@ function Projects() {
             className="flex flex-col gap-4 lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle groceryBg "
             ref={refCard1}
           >
-            <div className="flex-1 rounded-lg ecommerceBg"></div>
+            <div className="hidden lg:block relative flex-1 rounded-lg">
+              <motion.img
+                src={ecommerce}
+                alt=""
+                className="absolute w-[95%] rounded-lg "
+                animate={card1}
+              />
+            </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
@@ -185,10 +224,17 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col gap-4 lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
+            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
             ref={refCard2}
           >
-            <div className="flex-1 rounded-lg taguroBg"></div>
+            <div className="hidden lg:block  relative flex-1 rounded-lg ">
+              <motion.img
+                src={taguroAppBg}
+                alt=""
+                className="absolute -top-[5%] "
+                animate={card2}
+              />
+            </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
@@ -228,7 +274,14 @@ function Projects() {
             className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle mathBg"
             ref={refCard3}
           >
-            <div className="flex-1"></div>
+            <div className="hidden lg:block relative flex-1 rounded-lg">
+              <motion.img
+                src={mathAppBg}
+                alt=""
+                className="absolute w-[85%] left-5 -top-[20%]"
+                animate={card3}
+              />
+            </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
