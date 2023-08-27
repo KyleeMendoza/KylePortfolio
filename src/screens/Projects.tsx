@@ -199,10 +199,10 @@ function Projects() {
                 className="my-3 text-sm text-white text-center lg:text-start"
                 animate={title1}
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
-                rem sapiente ad totam id eum assumenda maiores quidem voluptates
-                excepturi facere nulla non!
+                E-commerce website with an admin interface using HTML, CSS,
+                JavaScript, and PHP. The website allows users to browse and
+                purchase products, and it also includes an admin interface for
+                managing the products, orders, and other aspects of the website.
               </motion.p>
               <div className="mt-6 flex gap-4 justify-center items-center ">
                 <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
@@ -231,7 +231,7 @@ function Projects() {
               <motion.img
                 src={taguroAppBg}
                 alt=""
-                className="absolute -top-[5%] "
+                className="absolute top-0 "
                 animate={card2}
               />
             </div>
@@ -246,10 +246,11 @@ function Projects() {
                 className="my-3 text-sm text-white text-center lg:text-start"
                 animate={title2}
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
-                rem sapiente ad totam id eum assumenda maiores quidem voluptates
-                excepturi facere nulla non!
+                Mobile application using React Native and Firebase. It is a
+                tutor finding app that allows users to find tutors, message
+                them, schedule video calls, and book appointments. The app also
+                includes a machine learning face verification system to ensure
+                that users and tutors are who they say they are.
               </motion.p>
               <div className="mt-6 flex gap-4 justify-center items-center ">
                 <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
@@ -278,7 +279,7 @@ function Projects() {
               <motion.img
                 src={mathAppBg}
                 alt=""
-                className="absolute w-[85%] left-5 -top-[20%]"
+                className="absolute w-[85%] left-5 -top-[10%]"
                 animate={card3}
               />
             </div>
@@ -293,10 +294,11 @@ function Projects() {
                 className="my-3 text-sm text-white text-center lg:text-start"
                 animate={title3}
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut
-                rem sapiente ad totam id eum assumenda maiores quidem voluptates
-                excepturi facere nulla non!
+                Mobile game using Android Studio and SQL. It is a math quiz game
+                that helps elementary students in their math skills by providing
+                different levels and user rankings. The game is designed to be
+                fun and engaging, while also challenging students to learn and
+                improve their math skills.
               </motion.p>
               <div className="mt-6 flex gap-4 justify-center items-center ">
                 <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">

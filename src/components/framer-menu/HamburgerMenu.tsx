@@ -13,6 +13,7 @@ const sidebar = {
       stiffness: 20,
       restDelta: 2,
     },
+    // zIndex: 1,
   },
   closed: {
     clipPath: "circle(30px at 384px 45px)",
@@ -22,6 +23,7 @@ const sidebar = {
       stiffness: 400,
       damping: 40,
     },
+    // zIndex: 0,
   },
 };
 
@@ -33,7 +35,7 @@ export const HamburgerMenu = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       className={`${
-        isOpen ? "z-20" : "z-10"
+        isOpen ? "z-20" : "z-10 delay-1000"
       } absolute right-0 top-0 w-full h-screen border border-2`}
     >
       <motion.div

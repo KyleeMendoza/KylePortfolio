@@ -140,9 +140,10 @@ function Home() {
           </motion.div>
           <motion.div animate={h2} className=" w-3/4 lg:w-auto">
             <p className="text-md font-semibold mt-4">
-              I'm <span className="text-brightRed">Kyle Mendoza</span> Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Voluptatum at
-              veniam rerum blanditiis nisi esse animi dicta minus!
+              I'm <span className="text-brightRed">Kyle Mendoza</span>, a
+              passionate and aspiring software developer based in Pasig. I have
+              experience in building web and mobile applications using
+              JavaScript, React, and other libraries and frameworks.
             </p>
             <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6">
               <a

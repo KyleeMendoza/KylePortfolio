@@ -74,14 +74,14 @@ function About() {
             Aspiring Software Developer
           </p>
           <p className="text-xs mb-3 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
-            natus dolor expedita fuga quaerat ipsam voluptates obcaecati nostrum
-            vero sapiente, laboriosam recusandae odio aliquid incidunt itaque.
-            Quo explicabo consequuntur asperiores! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptatibus minus aspernatur,
-            doloremque voluptatem numquam unde cum ipsa laborum exercitationem
-            consequuntur maiores a officiis itaque, dolorem tempora est aperiam
-            sequi perferendis.
+            I am an aspiring software developer with a passion for creating
+            innovative and user-friendly applications. With experience in web
+            and mobile development, I am proficient in a variety of programming
+            languages, frameworks, and SDLC. I am a quick learner and also a
+            team player, always willing to to take on new challenges and help
+            others. I also write tutorial blogs and always looking for new ways
+            to learn and grow as a developer. I am confident that I have the
+            skills and the drive to succeed in a career as a software developer.
           </p>
         </motion.div>
         <div className="flex flex-row-reverse">
