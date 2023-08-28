@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import Logo from "../assets/logo.png";
+import resume from "../assets/Resume.pdf";
+
 import Menu from "./framer-menu/Menu";
 import { Button } from "@material-tailwind/react";
 import { HamburgerMenu } from "./framer-menu/HamburgerMenu";
@@ -41,9 +43,13 @@ function NavBar() {
           </div>
 
           <div className="hidden lg:flex lg:items-center ">
-            <div className="uppercase transition-all delay-50 cursor-pointer font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold bg-brightRed text-white border-brightRed shadow-middle">
+            <a
+              href={resume}
+              download="Mendoza, Kyle Dominic L. - Resume.pdf"
+              className="uppercase transition-all delay-50 cursor-pointer font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold bg-brightRed text-white border-brightRed shadow-middle"
+            >
               Download CV
-            </div>
+            </a>
           </div>
         </div>
       </div>

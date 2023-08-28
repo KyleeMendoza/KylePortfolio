@@ -15,6 +15,7 @@ import {
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import formalPic from "../assets/bg-hero.png";
+import resume from "../assets/Resume.pdf";
 
 function Home() {
   const [buttonSize, setButtonSize] = useState<"sm" | "lg">("lg"); //size of icon button social links
@@ -148,9 +149,16 @@ function Home() {
             <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6">
               <a
                 href="#about"
-                className="transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
+                className="hidden lg:block transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
               >
                 About Me
+              </a>
+              <a
+                download="Mendoza, Kyle Dominic L. - Resume.pdf"
+                href={resume}
+                className="block lg:hidden transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
+              >
+                Download CV
               </a>
             </div>
           </motion.div>

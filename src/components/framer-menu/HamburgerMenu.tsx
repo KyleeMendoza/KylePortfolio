@@ -7,16 +7,18 @@ import Menu from "./Menu";
 
 const sidebar = {
   open: {
-    clipPath: `circle(2200px at 384px 45px)`,
+    clipPath: `circle(2200px at 388px 45px)`,
     transition: {
       type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
+
     // zIndex: 1,
   },
   closed: {
-    clipPath: "circle(30px at 384px 45px)",
+    // clipPath: "circle(30px at 384px 45px)",
+    clipPath: "circle(30px at 388px 45px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -36,20 +38,22 @@ export const HamburgerMenu = () => {
       animate={isOpen ? "open" : "closed"}
       className={`${
         isOpen ? "z-20" : "z-10 delay-1000"
-      } absolute right-0 top-0 w-full h-screen border border-2`}
+      } absolute right-0 top-0 w-full h-screen`}
     >
-      <motion.div
-        className="absolute right-0 top-0 bottom-0 w-full bg-darkBlue"
-        variants={sidebar}
-      />
+      <div>
+        <motion.div
+          className="absolute right-0 top-0 bottom-0 w-full bg-darkBlue"
+          variants={sidebar}
+        />
 
-      {/* <div className={`${isOpen ? "block" : "hidden"}`}>
+        {/* <div className={`${isOpen ? "block" : "hidden"}`}>
         <Navigation setIsOpen={setIsOpen} isOpen={isOpen} />
       </div> */}
-      <Navigation setIsOpen={setIsOpen} isOpen={isOpen} />
+        <Navigation setIsOpen={setIsOpen} isOpen={isOpen} />
 
-      <div className="flex justify-end mt-5 pr-3">
-        <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <div className="flex justify-end mt-5 pr-3">
+          <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
       </div>
     </motion.nav>
   );
