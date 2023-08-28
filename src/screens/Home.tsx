@@ -49,17 +49,17 @@ function Home() {
       h1.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+        transition: { type: "tween", bounce: 0.2, duration: 0.8 },
       });
       h2.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.7 },
+        transition: { type: "tween", bounce: 0.2, duration: 1 },
       });
       heroBg.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+        transition: { type: "tween", bounce: 0.2, duration: 0.8 },
       });
       link.start((i) => ({
         y: 0,
