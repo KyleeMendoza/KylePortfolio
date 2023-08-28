@@ -10,7 +10,7 @@ function Menu({ isOpen, setIsOpen }: MenuProps) {
   return (
     <div>
       <div>
-        <Hamburger toggled={isOpen} toggle={setIsOpen} rounded color="white" />
+        <Hamburger toggled={isOpen} toggle={setIsOpen} rounded color="red" />
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ import resume from "../assets/Resume.pdf";
 
 function Home() {
   const [buttonSize, setButtonSize] = useState<"sm" | "lg">("lg"); //size of icon button social links
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const [text] = useTypewriter({
     words: [
@@ -112,6 +113,18 @@ function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="flex w-full h-full justify-center items-center">
       <div
@@ -120,7 +133,7 @@ function Home() {
       >
         <div className="z-10 flex flex-col gap-1 lg:gap-0 items-center lg:items-start text-center lg:text-start lg:w-[53%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div
-            animate={h1}
+            animate={screenWidth >= 1024 ? h1 : ""}
             className="flex flex-col lg:block justify-center gap-2 lg:gap-0"
           >
             <p className="home-text ">
@@ -139,7 +152,10 @@ function Home() {
               </span>{" "}
             </p>
           </motion.div>
-          <motion.div animate={h2} className=" w-3/4 lg:w-auto">
+          <motion.div
+            animate={screenWidth >= 1024 ? h2 : ""}
+            className=" w-3/4 lg:w-auto"
+          >
             <p className="text-md font-semibold mt-4">
               I'm <span className="text-brightRed">Kyle Mendoza</span>, a
               passionate and aspiring software developer based in Pasig. I have
@@ -166,7 +182,7 @@ function Home() {
           <div className="flex gap-3 justify-center lg:justify-normal ">
             <motion.a
               custom={0}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               href="https://www.facebook.com/shaclonely"
               className="drop-shadow-lg"
             >
@@ -179,7 +195,7 @@ function Home() {
             </motion.a>
             <motion.a
               custom={1}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               href="https://twitter.com/kdmendoza00"
               className="drop-shadow-lg"
             >
@@ -192,7 +208,7 @@ function Home() {
             </motion.a>
             <motion.a
               custom={2}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               href="https://www.instagram.com/kyleemndz/"
               className="drop-shadow-lg"
             >
@@ -205,7 +221,7 @@ function Home() {
             </motion.a>
             <motion.a
               custom={3}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               href="https://www.linkedin.com/in/kyleemendoza"
               className="drop-shadow-lg"
             >
@@ -218,7 +234,7 @@ function Home() {
             </motion.a>
             <motion.a
               custom={4}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               href="https://github.com/KyleeMendoza"
               className="drop-shadow-lg"
             >
@@ -231,7 +247,7 @@ function Home() {
             </motion.a>
             <motion.a
               custom={5}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               href="https://medium.com/@kylemendoza67"
               className="drop-shadow-lg"
             >
@@ -245,7 +261,7 @@ function Home() {
           </div>
         </div>
         <motion.div
-          animate={heroBg}
+          animate={screenWidth >= 1024 ? heroBg : ""}
           className="hidden flex-1 lg:relative lg:flex items-center justify-center "
         >
           <div className="justify-center flex lg:absolute">

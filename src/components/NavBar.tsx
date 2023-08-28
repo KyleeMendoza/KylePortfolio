@@ -20,12 +20,12 @@ function NavBar() {
     <>
       <div className="flex justify-center items-center px-5 lg:px-0 pt-5">
         <div className="flex w-full lg:w-[75%] justify-between">
-          <div className="w-full lg:w-auto flex justify-between items-center">
+          <div className="w-full lg:w-auto flex justify-between items-center ">
             <div className="flex items-center text-3xl cursor-pointer">
               <img src={Logo} alt="logo" className="w-14 h-14" />
               <p className="font-['Poppins'] font-bold text-darkBlue">Kyle</p>
             </div>
-            <div className="block lg:hidden ">
+            <div className="lg:hidden border-2 border-yellow-600">
               {/* <Menu isOpen={isOpen} setIsOpen={setIsOpen} /> */}
               <HamburgerMenu />
             </div>
