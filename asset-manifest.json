@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KylePortfolio/static/css/main.d5cb5a52.css",
-    "main.js": "/KylePortfolio/static/js/main.2d32ad7f.js",
+    "main.css": "/KylePortfolio/static/css/main.4eab7996.css",
+    "main.js": "/KylePortfolio/static/js/main.5de1f8ca.js",
     "static/js/787.b6f1e7c5.chunk.js": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js",
     "static/media/mathBg.png": "/KylePortfolio/static/media/mathBg.7c0ee141309fd55978da.png",
     "static/media/onlineClassBg.png": "/KylePortfolio/static/media/onlineClassBg.725730786f3e3572de2b.png",
@@ -12,12 +12,12 @@
     "static/media/mathApp.png": "/KylePortfolio/static/media/mathApp.5c33fb996b6428965bb8.png",
     "static/media/taguroApp.png": "/KylePortfolio/static/media/taguroApp.863ccfa00bcae79890a0.png",
     "index.html": "/KylePortfolio/index.html",
-    "main.d5cb5a52.css.map": "/KylePortfolio/static/css/main.d5cb5a52.css.map",
-    "main.2d32ad7f.js.map": "/KylePortfolio/static/js/main.2d32ad7f.js.map",
+    "main.4eab7996.css.map": "/KylePortfolio/static/css/main.4eab7996.css.map",
+    "main.5de1f8ca.js.map": "/KylePortfolio/static/js/main.5de1f8ca.js.map",
     "787.b6f1e7c5.chunk.js.map": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5cb5a52.css",
-    "static/js/main.2d32ad7f.js"
+    "static/css/main.4eab7996.css",
+    "static/js/main.5de1f8ca.js"
   ]
 }
