@@ -108,7 +108,7 @@ function Contact() {
         <div className="hidden lg:flex flex-1 items-center justify-center ">
           <div className="flex flex-col">
             <img src={Logo} alt="logo" className="w-24 h-24" />
-            <p className="text-xl ml-3">kylemendoza67@gmail.com</p>
+            <p className="text-xl ml-3">kyledominicmendoza@gmail.com</p>
           </div>
         </div>
       </div>
