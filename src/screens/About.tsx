@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, IconButton } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, useAnimation, useAnimationControls } from "framer-motion";
@@ -12,6 +12,8 @@ import {
 import faTailwind from "../assets/tailwind-icon.png";
 
 function About() {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
@@ -60,16 +62,28 @@ function About() {
     }
   }, [inView]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div ref={ref} className="flex h-full justify-center items-center ">
       <div className="w-[90%] lg:w-[50%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-sm font-bold mb-3 text-brightRed"
-          animate={h1}
+          animate={screenWidth >= 1024 ? h1 : ""}
         >
           ABOUT ME
         </motion.p>
-        <motion.div className="ml-2" animate={h2}>
+        <motion.div className="ml-2" animate={screenWidth >= 1024 ? h2 : ""}>
           <p className="text-2xl font-bold mb-3 ">
             Aspiring Software Developer
           </p>
@@ -88,7 +102,7 @@ function About() {
           <div className="flex gap-3 ml-4 pl-4 border-l-4 border-brightRed ml-4">
             <motion.a
               custom={0}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="HTML"
             >
@@ -101,7 +115,7 @@ function About() {
             </motion.a>
             <motion.a
               custom={1}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg "
               title="CSS"
             >
@@ -114,7 +128,7 @@ function About() {
             </motion.a>
             <motion.a
               custom={2}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="JavaScript"
             >
@@ -127,7 +141,7 @@ function About() {
             </motion.a>
             <motion.a
               custom={3}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="ReactJs"
             >
@@ -140,7 +154,7 @@ function About() {
             </motion.a>
             <motion.a
               custom={3}
-              animate={link}
+              animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="Tailwind CSS"
             >
@@ -149,7 +163,10 @@ function About() {
               </div>
             </motion.a>
           </div>
-          <motion.div className="flex items-center" animate={h1}>
+          <motion.div
+            className="flex items-center"
+            animate={screenWidth >= 1024 ? h1 : ""}
+          >
             <p className="font-bold text-sm">Tech Stack</p>
           </motion.div>
         </div>

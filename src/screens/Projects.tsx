@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion, useAnimation, useAnimationControls } from "framer-motion";
@@ -25,6 +25,7 @@ function Projects() {
   //     link: "https://github.com/",
   //   },
   // ];
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const { ref: refBody, inView: inViewBody } = useInView({
     threshold: 0.2,
@@ -161,18 +162,33 @@ function Projects() {
     }
   }, [inViewCard3]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div ref={refBody} className="flex justify-center items-center ">
       <div className="w-[90%] lg:w-[75%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-sm font-bold mb-3 text-brightRed"
-          animate={h1}
+          animate={screenWidth >= 1024 ? h1 : ""}
         >
           PROJECTS
         </motion.p>
 
         <div className="lg:ml-2 ">
-          <motion.p className="text-2xl font-bold " animate={h2}>
+          <motion.p
+            className="text-2xl font-bold "
+            animate={screenWidth >= 1024 ? h2 : ""}
+          >
             Each Project has a unique piece of development
           </motion.p>
 
@@ -185,19 +201,19 @@ function Projects() {
                 src={ecommerce}
                 alt=""
                 className="absolute w-[95%] rounded-lg "
-                animate={card1}
+                animate={screenWidth >= 1024 ? card1 : ""}
               />
             </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
-                animate={title1}
+                animate={screenWidth >= 1024 ? title1 : ""}
               >
                 E-commerce website
               </motion.p>
               <motion.p
                 className="my-3 text-sm text-white text-center lg:text-start"
-                animate={title1}
+                animate={screenWidth >= 1024 ? title1 : ""}
               >
                 E-commerce website with an admin interface using HTML, CSS,
                 JavaScript, and PHP. The website allows users to browse and
@@ -232,19 +248,19 @@ function Projects() {
                 src={taguroAppBg}
                 alt=""
                 className="absolute top-0 "
-                animate={card2}
+                animate={screenWidth >= 1024 ? card2 : ""}
               />
             </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
-                animate={title2}
+                animate={screenWidth >= 1024 ? title2 : ""}
               >
                 Tutor Finding App
               </motion.p>
               <motion.p
                 className="my-3 text-sm text-white text-center lg:text-start"
-                animate={title2}
+                animate={screenWidth >= 1024 ? title2 : ""}
               >
                 Mobile application using React Native and Firebase. It is a
                 tutor finding app that allows users to find tutors, message
@@ -280,19 +296,19 @@ function Projects() {
                 src={mathAppBg}
                 alt=""
                 className="absolute w-[85%] left-5 -top-[10%]"
-                animate={card3}
+                animate={screenWidth >= 1024 ? card3 : ""}
               />
             </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
-                animate={title3}
+                animate={screenWidth >= 1024 ? title3 : ""}
               >
                 Math Quiz Mobile App
               </motion.p>
               <motion.p
                 className="my-3 text-sm text-white text-center lg:text-start"
-                animate={title3}
+                animate={screenWidth >= 1024 ? title3 : ""}
               >
                 Mobile game using Android Studio and SQL. It is a math quiz game
                 that helps elementary students in their math skills by providing

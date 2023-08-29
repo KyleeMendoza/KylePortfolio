@@ -73,7 +73,7 @@ function App() {
           <div className=" glass-bg pt-10 lg:py-20" id="projects">
             <Projects />
           </div>
-          <div className="relative h-[50vh] lg:h-[40vh] " id="contact">
+          <div className="relative h-[40vh] " id="contact">
             <Contact />
             <div className="hidden lg:block absolute top-[60%] right-[50%] ">
               <IconButton
