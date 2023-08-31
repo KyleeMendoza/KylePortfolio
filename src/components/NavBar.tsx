@@ -31,7 +31,7 @@ function NavBar() {
             </div>
           </div>
 
-          <div className="hidden items-center gap-10 lg:flex lg:flex-row w-auto py-0 bg-transparent text-black transition-all duration-400">
+          <div className="hidden items-center gap-14 text-md lg:text-2xl lg:flex lg:flex-row w-auto py-0 bg-transparent text-black transition-all duration-400">
             {navData.map((item) => (
               <a
                 href={item.path}
@@ -46,7 +46,7 @@ function NavBar() {
             <a
               href={resume}
               download="Mendoza, Kyle Dominic L. - Resume.pdf"
-              className="uppercase transition-all delay-50 cursor-pointer font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold bg-brightRed text-white border-brightRed shadow-middle"
+              className="uppercase transition-all delay-50 cursor-pointer font-['poppins'] rounded-sm px-4 py-2 text-xs lg:text-lg font-bold bg-brightRed text-white border-brightRed shadow-middle"
             >
               Download CV
             </a>

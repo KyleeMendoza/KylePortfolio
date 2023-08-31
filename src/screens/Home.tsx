@@ -134,7 +134,7 @@ function Home() {
     <div className="flex w-full h-full justify-center items-center border-2 border-red-600">
       <div
         ref={ref}
-        className="flex flex-col flex-col-reverse lg:flex-row w-[100%] lg:max-w-[80%] border-2 border-blue-600"
+        className="flex flex-col-reverse lg:flex-row w-[100%] lg:max-w-[80%] border-2 border-blue-600"
       >
         <div className="z-10 flex flex-col gap-1 lg:gap-0 items-center lg:items-start text-center lg:text-start lg:w-[50%] font-['Poppins'] font-bold text-darkBlue border-2 border-green-600">
           <motion.div
@@ -167,7 +167,7 @@ function Home() {
             animate={screenWidth >= 1024 ? h2 : ""}
             className=" w-3/4 lg:w-auto"
           >
-            <p className="text-md font-semibold mt-4">
+            <p className="text-md lg:text-xl font-semibold mt-4">
               I'm <span className="text-brightRed">Kyle Mendoza</span>, a
               passionate and aspiring software developer based in Pasig. I have
               experience in building web and mobile applications using
@@ -176,7 +176,7 @@ function Home() {
             <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6">
               <a
                 href="#about"
-                className="hidden lg:block transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
+                className="hidden lg:block transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs lg:text-xl font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
               >
                 About Me
               </a>
@@ -204,7 +204,10 @@ function Home() {
                 className="rounded-full block hover:bg-[#1877F2] hover:scale-125 "
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faFacebook} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="flex text-xl lg:text-2xl"
+                />
               </IconButton>
             </motion.a>
             <motion.a
@@ -219,7 +222,10 @@ function Home() {
                 className="rounded-full block hover:bg-[#1DA1F2] hover:scale-125"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faTwitter} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="flex text-xl lg:text-2xl"
+                />
               </IconButton>
             </motion.a>
             <motion.a
@@ -234,7 +240,10 @@ function Home() {
                 className="rounded-full block hover:bg-gradient-to-r from-[#F56040] via-[#E1306C] to-[#833AB4] hover:scale-125"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faInstagram} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="flex text-xl lg:text-2xl"
+                />
               </IconButton>
             </motion.a>
             <motion.a
@@ -249,7 +258,10 @@ function Home() {
                 className="rounded-full block hover:bg-[#0077b5] hover:scale-125"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faLinkedin} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="flex text-xl lg:text-2xl"
+                />
               </IconButton>
             </motion.a>
             <motion.a
@@ -264,7 +276,10 @@ function Home() {
                 className="rounded-full block hover:scale-125"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="flex text-xl lg:text-2xl"
+                />
               </IconButton>
             </motion.a>
             <motion.a
@@ -279,7 +294,10 @@ function Home() {
                 className="rounded-full block hover:scale-125"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faMedium} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faMedium}
+                  className="flex text-xl lg:text-2xl"
+                />
               </IconButton>
             </motion.a>
           </div>
@@ -291,7 +309,11 @@ function Home() {
           className="hidden flex-1 lg:relative lg:flex items-center justify-center "
         >
           <div className="justify-center flex lg:absolute">
-            <img src={formalPic} alt="Picture" className="hero-bg right-0" />
+            <img
+              src={formalPic}
+              alt="Picture"
+              className="max-w-[70%] right-0"
+            />
           </div>
         </motion.div>
       </div>

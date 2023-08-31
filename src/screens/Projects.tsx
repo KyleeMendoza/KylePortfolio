@@ -130,7 +130,7 @@ function Projects() {
     >
       <div className="w-[90%] lg:max-w-[80%] font-['Poppins'] text-darkBlue border-2 border-blue-600">
         <motion.p
-          className="text-md font-bold mb-3 text-brightRed"
+          className="text-md lg:text-xl font-bold mb-3 text-brightRed"
           variants={fromLeft}
           initial="hidden"
           animate={screenWidth >= 1024 ? h1 : ""}
@@ -140,7 +140,7 @@ function Projects() {
 
         <div className="lg:ml-2 ">
           <motion.p
-            className="text-3xl font-bold "
+            className="text-2xl lg:text-3xl font-bold "
             variants={fromRight}
             initial="hidden"
             animate={screenWidth >= 1024 ? h2 : ""}
@@ -149,22 +149,22 @@ function Projects() {
           </motion.p>
 
           <div
-            className="flex flex-col gap-4 lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle groceryBg "
+            className="flex flex-col gap-4 lg:flex-row py-16 lg:py-20 px-4 lg:px-16 rounded-lg my-10 shadow-middle groceryBg "
             ref={refCard1}
           >
-            <div className="hidden lg:block relative flex-1 rounded-lg">
+            <div className="border-2 border-red-600 hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
               <motion.img
                 src={ecommerce}
                 alt=""
-                className="absolute w-[95%] rounded-lg "
+                className="max-w-[80%] rounded-lg "
                 variants={fromLeft}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? card1 : ""}
               />
             </div>
-            <div className="flex-1 ">
+            <div className="flex-1 border-2 border-red-600">
               <motion.p
-                className="text-center font-bold text-2xl text-white "
+                className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? title1 : ""}
@@ -172,7 +172,7 @@ function Projects() {
                 E-commerce website
               </motion.p>
               <motion.p
-                className="my-3 text-sm text-white text-center lg:text-start"
+                className="my-3 text-sm lg:text-xl text-white text-center lg:text-start"
                 variants={fromRight}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? title1 : ""}
@@ -182,18 +182,18 @@ function Projects() {
                 purchase products, and it also includes an admin interface for
                 managing the products, orders, and other aspects of the website.
               </motion.p>
-              <div className="mt-6 flex gap-4 justify-center items-center ">
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+              <div className="mt-6 flex gap-4 justify-center items-center text-sm lg:text-lg">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   HTML
                 </div>
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   CSS
                 </div>
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   JavaScript
                 </div>
               </div>
-              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
+              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm lg:text-lg text-white">
                 <a href="https://github.com/KyleeMendoza/E-commerce-Website-with-Admin-and-Database">
                   Preview
                 </a>
@@ -202,14 +202,14 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
+            className="flex flex-col gap-4 lg:flex-row py-16 lg:py-20 px-4 lg:px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
             ref={refCard2}
           >
-            <div className="hidden lg:block  relative flex-1 rounded-lg ">
+            <div className="border-2 border-red-600 hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
               <motion.img
                 src={taguroAppBg}
                 alt=""
-                className="absolute top-0 "
+                className="max-w-[80%] top-0 "
                 variants={fromLeft}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? card2 : ""}
@@ -217,7 +217,7 @@ function Projects() {
             </div>
             <div className="flex-1 ">
               <motion.p
-                className="text-center font-bold text-2xl text-white "
+                className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? title2 : ""}
@@ -225,7 +225,7 @@ function Projects() {
                 Tutor Finding App
               </motion.p>
               <motion.p
-                className="my-3 text-sm text-white text-center lg:text-start"
+                className="my-3 text-sm lg:text-xl text-white text-center lg:text-start"
                 variants={fromRight}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? title2 : ""}
@@ -236,18 +236,18 @@ function Projects() {
                 includes a machine learning face verification system to ensure
                 that users and tutors are who they say they are.
               </motion.p>
-              <div className="mt-6 flex gap-4 justify-center items-center ">
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+              <div className="mt-6 flex gap-4 justify-center items-center text-sm lg:text-lg">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   React Native
                 </div>
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   Firebase
                 </div>
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   Tailwind
                 </div>
               </div>
-              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
+              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm lg:text-lg text-white">
                 <a href="https://github.com/KyleeMendoza/firebaseWebrtc">
                   Preview
                 </a>
@@ -256,14 +256,14 @@ function Projects() {
             </div>
           </div>
           <div
-            className="flex flex-col lg:flex-row py-20 px-16 rounded-lg my-10 shadow-middle mathBg"
+            className="flex flex-col gap-4 lg:flex-row py-16 lg:py-20 px-4 lg:px-16 rounded-lg my-10 shadow-middle mathBg"
             ref={refCard3}
           >
-            <div className="hidden lg:block relative flex-1 rounded-lg">
+            <div className="border-2 border-red-600 hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
               <motion.img
                 src={mathAppBg}
                 alt=""
-                className="absolute w-[85%] left-5 -top-[10%]"
+                className="max-w-[80%] top-0 "
                 variants={fromLeft}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? card3 : ""}
@@ -271,7 +271,7 @@ function Projects() {
             </div>
             <div className="flex-1 ">
               <motion.p
-                className="text-center font-bold text-2xl text-white "
+                className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? title3 : ""}
@@ -279,7 +279,7 @@ function Projects() {
                 Math Quiz Mobile App
               </motion.p>
               <motion.p
-                className="my-3 text-sm text-white text-center lg:text-start"
+                className="my-3 text-sm lg:text-xl text-white text-center lg:text-start"
                 variants={fromRight}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? title3 : ""}
@@ -290,15 +290,15 @@ function Projects() {
                 fun and engaging, while also challenging students to learn and
                 improve their math skills.
               </motion.p>
-              <div className="mt-6 flex gap-4 justify-center items-center ">
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+              <div className="mt-6 flex gap-4 justify-center items-center text-sm lg:text-lg">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   Android Studio
                 </div>
-                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-sm text-white">
+                <div className="shadow-offset border border-1 border-white px-4 py-1 rounded-md text-white">
                   SQL
                 </div>
               </div>
-              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm text-white">
+              <div className="flex items-center justify-center font-bold gap-1 mt-5 text-sm lg:text-lg text-white">
                 <a href="https://github.com/KyleeMendoza/MATHMAGICIANS---Mobile-App">
                   Preview
                 </a>

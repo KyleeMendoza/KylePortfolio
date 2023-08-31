@@ -17,7 +17,8 @@ html {
 
 .home-text {
   /* font-size: clamp(0.5rem, 12vw + 1rem, 3rem); */
-  font-size: clamp(2.5rem, 2.1897rem + 0.6897vw, 3rem);
+  /* font-size: clamp(2.5rem, 2.1897rem + 0.6897vw, 3rem); */
+  font-size: clamp(3rem, -0.0508rem + 3.3898vw, 4rem);
 }
 
 .shadow-middle {

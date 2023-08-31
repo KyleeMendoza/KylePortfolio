@@ -37,8 +37,8 @@ function Contact() {
   return (
     <div className="relative flex flex-col h-full items-center justify-center bg-black border-2 border-red-600">
       <div className="flex w-full lg:max-w-[80%] font-['Poppins'] font-bold text-white border-2 border-blue-600">
-        <div className="flex flex-1 flex-col gap-5 items-start justify-center flex-1 border-2 border-red-600">
-          <div className="pt-2 text-xl text-center lg:text-start lg:text-right">
+        <div className="flex flex-col gap-5 items-center lg:items-start justify-center flex-1 border-2 border-red-600">
+          <div className="pt-2 text-xl lg:text-3xl text-center lg:text-start ">
             <p>Feel free to hit me up. I'm looking</p>
             <p>forward to hearing from you.</p>
           </div>
@@ -51,7 +51,10 @@ function Contact() {
                 className="rounded-full block bg-black"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faFacebook} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="flex text-lg lg:text-3xl"
+                />
               </IconButton>
             </a>
             <a
@@ -62,7 +65,10 @@ function Contact() {
                 className="rounded-full block bg-black"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faTwitter} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="flex text-lg lg:text-3xl"
+                />
               </IconButton>
             </a>
             <a
@@ -73,7 +79,10 @@ function Contact() {
                 className="rounded-full block bg-black"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faInstagram} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="flex text-lg lg:text-3xl"
+                />
               </IconButton>
             </a>
             <a
@@ -84,7 +93,10 @@ function Contact() {
                 className="rounded-full block bg-black"
                 size={buttonSize}
               >
-                <FontAwesomeIcon icon={faLinkedin} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="flex text-lg lg:text-3xl"
+                />
               </IconButton>
             </a>
             <a
@@ -92,7 +104,10 @@ function Contact() {
               className="drop-shadow-lg"
             >
               <IconButton className="rounded-full bg-black" size={buttonSize}>
-                <FontAwesomeIcon icon={faGithub} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="flex text-lg lg:text-3xl"
+                />
               </IconButton>
             </a>
             <a
@@ -100,15 +115,20 @@ function Contact() {
               className="drop-shadow-lg"
             >
               <IconButton className="rounded-full bg-black" size={buttonSize}>
-                <FontAwesomeIcon icon={faMedium} className="flex text-lg" />
+                <FontAwesomeIcon
+                  icon={faMedium}
+                  className="flex text-lg lg:text-3xl"
+                />
               </IconButton>
             </a>
           </div>
         </div>
         <div className="hidden lg:flex flex-1 items-center justify-end ">
           <div className="flex flex-col">
-            <img src={Logo} alt="logo" className="w-24 h-24" />
-            <p className="text-xl ml-3">kyledominicmendoza@gmail.com</p>
+            <img src={Logo} alt="logo" className="w-36 h-36" />
+            <p className="text-xl lg:text-3xl ml-3">
+              kyledominicmendoza@gmail.com
+            </p>
           </div>
         </div>
       </div>
@@ -122,7 +142,7 @@ function Contact() {
           </IconButton>
         </a>
       </div> */}
-      <div className="absolute bottom-2 text-white text-center text-xs">
+      <div className="absolute bottom-2 text-white text-center text-xs ">
         <p>
           2023 - Kyle Mendoza's Website Portfolio. Philippines{" "}
           <span>&copy;</span> All rights reserved.

@@ -95,7 +95,7 @@ function About() {
     >
       <div className="w-[90%] lg:max-w-[60%] font-['Poppins'] text-darkBlue border-2 border-red-600">
         <motion.p
-          className="text-md font-bold mb-3 text-brightRed"
+          className="text-md lg:text-xl font-bold mb-3 text-brightRed"
           // animate={screenWidth >= 1024 ? h1 : ""}
           variants={fromLeft}
           initial="hidden"
@@ -110,10 +110,10 @@ function About() {
           initial="hidden"
           animate={screenWidth >= 1024 ? h2 : ""}
         >
-          <p className="text-3xl font-bold mb-3 ">
+          <p className="text-2xl lg:text-3xl font-semibold mb-3 ">
             Aspiring Software Developer
           </p>
-          <p className="text-sm mb-3 text-center lg:text-start">
+          <p className="text-sm lg:text-lg mb-3 text-center lg:text-start">
             I am an aspiring software developer with a passion for creating
             innovative and user-friendly applications. With experience in web
             and mobile development, I am proficient in a variety of programming
@@ -137,7 +137,7 @@ function About() {
               <div className="rounded-full block bg-black p-2 ">
                 <FontAwesomeIcon
                   icon={faHtml5}
-                  className="flex text-lg text-white"
+                  className="flex text-lg lg:text-2xl text-white"
                 />
               </div>
             </motion.a>
@@ -152,7 +152,7 @@ function About() {
               <div className="rounded-full block bg-black p-2 ">
                 <FontAwesomeIcon
                   icon={faCss3Alt}
-                  className="flex text-lg text-white"
+                  className="flex text-lg lg:text-2xl text-white"
                 />
               </div>
             </motion.a>
@@ -167,7 +167,7 @@ function About() {
               <div className="rounded-full block bg-black p-2 ">
                 <FontAwesomeIcon
                   icon={faJs}
-                  className="flex text-lg text-white"
+                  className="flex text-lg lg:text-2xl text-white"
                 />
               </div>
             </motion.a>
@@ -182,7 +182,7 @@ function About() {
               <div className="rounded-full block bg-black p-2 ">
                 <FontAwesomeIcon
                   icon={faReact}
-                  className="flex text-lg text-white"
+                  className="flex text-lg lg:text-2xl text-white"
                 />
               </div>
             </motion.a>
@@ -194,7 +194,7 @@ function About() {
               className="drop-shadow-lg"
               title="Tailwind CSS"
             >
-              <div className="rounded-full block bg-black p-2 w-8">
+              <div className="rounded-full block bg-black p-2 w-10">
                 <img src={faTailwind} alt="Tailwind CSS" />
               </div>
             </motion.a>
@@ -205,7 +205,7 @@ function About() {
             initial="hidden"
             animate={screenWidth >= 1024 ? h1 : ""}
           >
-            <p className="font-bold text-sm">Tech Stack</p>
+            <p className="font-bold text-sm lg:text-lg">Tech Stack</p>
           </motion.div>
         </div>
       </div>
