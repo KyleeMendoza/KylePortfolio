@@ -35,9 +35,9 @@ function Contact() {
   }, []);
 
   return (
-    <div className="relative flex flex-col h-full items-center justify-center bg-black ">
-      <div className="flex w-full lg:w-[75%] font-['Poppins'] font-bold text-white">
-        <div className="flex flex-1 flex-col gap-5 items-center justify-center flex-1 ">
+    <div className="relative flex flex-col h-full items-center justify-center bg-black border-2 border-red-600">
+      <div className="flex w-full lg:max-w-[80%] font-['Poppins'] font-bold text-white border-2 border-blue-600">
+        <div className="flex flex-1 flex-col gap-5 items-start justify-center flex-1 border-2 border-red-600">
           <div className="pt-2 text-xl text-center lg:text-start lg:text-right">
             <p>Feel free to hit me up. I'm looking</p>
             <p>forward to hearing from you.</p>
@@ -105,7 +105,7 @@ function Contact() {
             </a>
           </div>
         </div>
-        <div className="hidden lg:flex flex-1 items-center justify-center ">
+        <div className="hidden lg:flex flex-1 items-center justify-end ">
           <div className="flex flex-col">
             <img src={Logo} alt="logo" className="w-24 h-24" />
             <p className="text-xl ml-3">kyledominicmendoza@gmail.com</p>

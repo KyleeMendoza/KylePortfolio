@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Button, IconButton } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, useAnimation, useAnimationControls } from "framer-motion";
+import {
+  motion,
+  Variants,
+  useAnimation,
+  useAnimationControls,
+} from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
   faHtml5,
@@ -27,12 +32,17 @@ function About() {
       h1.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.5 },
+        transition: { type: "tween", bounce: 0.2, duration: 0.8 },
       });
       h2.start({
         x: 0,
         opacity: 1,
-        transition: { type: "tween", bounce: 0.2, duration: 0.7 },
+        transition: { type: "tween", bounce: 0.2, duration: 1 },
+      });
+      heroBg.start({
+        x: 0,
+        opacity: 1,
+        transition: { type: "tween", bounce: 0.2, duration: 0.8 },
       });
       link.start((i) => ({
         y: 0,
@@ -45,22 +55,26 @@ function About() {
         },
       }));
     }
-
-    if (!inView) {
-      h1.start({
-        x: -50,
-        opacity: 0,
-      });
-      h2.start({
-        x: 50,
-        opacity: 0,
-      });
-      link.start({
-        y: -30,
-        opacity: 0,
-      });
-    }
   }, [inView]);
+
+  const fromLeft: Variants = {
+    hidden: {
+      x: -50,
+      opacity: 0,
+    },
+  };
+  const fromRight: Variants = {
+    hidden: {
+      x: 50,
+      opacity: 0,
+    },
+  };
+  const fromLeftLink: Variants = {
+    hidden: {
+      y: -30,
+      opacity: 0,
+    },
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,19 +89,31 @@ function About() {
   }, []);
 
   return (
-    <div ref={ref} className="flex h-full justify-center items-center ">
-      <div className="w-[90%] lg:w-[50%] font-['Poppins'] text-darkBlue ">
+    <div
+      ref={ref}
+      className="flex h-full justify-center items-center border-2 border-blue-600"
+    >
+      <div className="w-[90%] lg:max-w-[60%] font-['Poppins'] text-darkBlue border-2 border-red-600">
         <motion.p
-          className="text-sm font-bold mb-3 text-brightRed"
+          className="text-md font-bold mb-3 text-brightRed"
+          // animate={screenWidth >= 1024 ? h1 : ""}
+          variants={fromLeft}
+          initial="hidden"
           animate={screenWidth >= 1024 ? h1 : ""}
         >
           ABOUT ME
         </motion.p>
-        <motion.div className="ml-2" animate={screenWidth >= 1024 ? h2 : ""}>
-          <p className="text-2xl font-bold mb-3 ">
+        <motion.div
+          className="ml-2"
+          // animate={screenWidth >= 1024 ? h2 : ""}
+          variants={fromRight}
+          initial="hidden"
+          animate={screenWidth >= 1024 ? h2 : ""}
+        >
+          <p className="text-3xl font-bold mb-3 ">
             Aspiring Software Developer
           </p>
-          <p className="text-xs mb-3 text-center lg:text-start">
+          <p className="text-sm mb-3 text-center lg:text-start">
             I am an aspiring software developer with a passion for creating
             innovative and user-friendly applications. With experience in web
             and mobile development, I am proficient in a variety of programming
@@ -102,6 +128,8 @@ function About() {
           <div className="flex gap-3 ml-4 pl-4 border-l-4 border-brightRed ml-4">
             <motion.a
               custom={0}
+              variants={fromLeftLink}
+              initial="hidden"
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="HTML"
@@ -115,6 +143,8 @@ function About() {
             </motion.a>
             <motion.a
               custom={1}
+              variants={fromLeftLink}
+              initial="hidden"
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg "
               title="CSS"
@@ -128,6 +158,8 @@ function About() {
             </motion.a>
             <motion.a
               custom={2}
+              variants={fromLeftLink}
+              initial="hidden"
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="JavaScript"
@@ -141,6 +173,8 @@ function About() {
             </motion.a>
             <motion.a
               custom={3}
+              variants={fromLeftLink}
+              initial="hidden"
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="ReactJs"
@@ -154,6 +188,8 @@ function About() {
             </motion.a>
             <motion.a
               custom={3}
+              variants={fromLeftLink}
+              initial="hidden"
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="Tailwind CSS"
@@ -165,6 +201,8 @@ function About() {
           </div>
           <motion.div
             className="flex items-center"
+            variants={fromLeft}
+            initial="hidden"
             animate={screenWidth >= 1024 ? h1 : ""}
           >
             <p className="font-bold text-sm">Tech Stack</p>

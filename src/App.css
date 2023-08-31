@@ -1,13 +1,13 @@
 html {
   /* font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300))); */
-  font-size: clamp(1rem, 0.6897rem + 0.6897vw, 1.5rem);
+  /* font-size: clamp(1rem, 0.6897rem + 0.6897vw, 1.5rem); */
   scroll-behavior: smooth;
 }
 /* .scrollable {
   scroll-behavior: smooth;
 } */
 .hero-bg {
-  max-width: calc(100% - 110px);
+  max-width: calc(100% - 130px);
   height: auto;
 }
 .icon-link {

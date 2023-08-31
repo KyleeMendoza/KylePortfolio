@@ -35,7 +35,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 200);
   }, []);
 
   return (
@@ -57,7 +57,7 @@ function App() {
             <header>
               <NavBar />
             </header>
-            <body className="relative flex justify-center flex-1 items-center ">
+            <body className="relative flex justify-center flex-1 items-center">
               <Home />
               <div className="hidden absolute lg:flex gap-1 right-20 bottom-10">
                 <p className="text-xs font-bold font-['poppins']">
@@ -75,7 +75,7 @@ function App() {
           </div>
           <div className="relative h-[40vh] " id="contact">
             <Contact />
-            <div className="hidden lg:block absolute top-[60%] right-[50%] ">
+            <div className="hidden lg:block absolute top-[60%] right-[48%] ">
               <IconButton
                 className="p-4 rounded-full bg-black block border border-2 border-white"
                 size="lg"
@@ -88,7 +88,7 @@ function App() {
             </div>
           </div>
           <div className="w-full h-screen absolute top-0 left-0" id="particles">
-            <Particle />
+            {/* <Particle /> */}
           </div>
         </div>
       )}

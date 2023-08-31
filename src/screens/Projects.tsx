@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { motion, useAnimation, useAnimationControls } from "framer-motion";
+import {
+  motion,
+  Variants,
+  useAnimation,
+  useAnimationControls,
+} from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import groceryBg from "../assets/grocery-bg.png";
 import ecommerce from "../assets/ecommerce.png";
@@ -9,22 +14,6 @@ import mathAppBg from "../assets/mathApp.png";
 import taguroAppBg from "../assets/taguroApp.png";
 
 function Projects() {
-  // const projectData = [
-  //   {
-  //     title: "E-commerce website",
-  //     description:
-  //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut rem sapiente ad totam id eum assumenda maiores quidem voluptates excepturi facere nulla non!",
-  //     stack: ["HTML", "CSS", "JavaScript"],
-  //     link: "https://github.com/",
-  //   },
-  //   {
-  //     title: "Tutor Finder App",
-  //     description:
-  //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam tenetur magnam, soluta voluptatem cumque eligendi ut rem sapiente ad totam id eum assumenda maiores quidem voluptates excepturi facere nulla non!",
-  //     stack: ["React Native", "Firebase", "Tailwind"],
-  //     link: "https://github.com/",
-  //   },
-  // ];
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const { ref: refBody, inView: inViewBody } = useInView({
@@ -61,26 +50,6 @@ function Projects() {
         opacity: 1,
         transition: { type: "tween", bounce: 0.2, duration: 0.7 },
       });
-      // title.start((i) => ({
-      //   x: 0,
-      //   opacity: 1,
-      //   transition: { type: "tween", bounce: 0.2, duration: 0.5 },
-      // }));
-    }
-
-    if (!inViewBody) {
-      h1.start({
-        x: -50,
-        opacity: 0,
-      });
-      h2.start({
-        x: 50,
-        opacity: 0,
-      });
-      // title.start({
-      //   x: 50,
-      //   opacity: 0,
-      // });
     }
   }, [inViewBody]);
 
@@ -95,17 +64,6 @@ function Projects() {
         x: 0,
         opacity: 1,
         transition: { type: "tween", bounce: 0.2, duration: 0.5 },
-      });
-    }
-
-    if (!inViewCard1) {
-      card1.start({
-        x: -50,
-        opacity: 0,
-      });
-      title1.start({
-        x: 50,
-        opacity: 0,
       });
     }
   }, [inViewCard1]);
@@ -123,17 +81,6 @@ function Projects() {
         transition: { type: "tween", bounce: 0.2, duration: 0.5 },
       });
     }
-
-    if (!inViewCard2) {
-      card2.start({
-        x: -50,
-        opacity: 0,
-      });
-      title2.start({
-        x: 50,
-        opacity: 0,
-      });
-    }
   }, [inViewCard2]);
 
   useEffect(() => {
@@ -149,18 +96,20 @@ function Projects() {
         transition: { type: "tween", bounce: 0.2, duration: 0.5 },
       });
     }
-
-    if (!inViewCard3) {
-      card3.start({
-        x: -50,
-        opacity: 0,
-      });
-      title3.start({
-        x: 50,
-        opacity: 0,
-      });
-    }
   }, [inViewCard3]);
+
+  const fromLeft: Variants = {
+    hidden: {
+      x: -50,
+      opacity: 0,
+    },
+  };
+  const fromRight: Variants = {
+    hidden: {
+      x: 50,
+      opacity: 0,
+    },
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -175,10 +124,15 @@ function Projects() {
   }, []);
 
   return (
-    <div ref={refBody} className="flex justify-center items-center ">
-      <div className="w-[90%] lg:w-[75%] font-['Poppins'] text-darkBlue ">
+    <div
+      ref={refBody}
+      className="flex justify-center items-center border-2 border-red-600"
+    >
+      <div className="w-[90%] lg:max-w-[80%] font-['Poppins'] text-darkBlue border-2 border-blue-600">
         <motion.p
-          className="text-sm font-bold mb-3 text-brightRed"
+          className="text-md font-bold mb-3 text-brightRed"
+          variants={fromLeft}
+          initial="hidden"
           animate={screenWidth >= 1024 ? h1 : ""}
         >
           PROJECTS
@@ -186,7 +140,9 @@ function Projects() {
 
         <div className="lg:ml-2 ">
           <motion.p
-            className="text-2xl font-bold "
+            className="text-3xl font-bold "
+            variants={fromRight}
+            initial="hidden"
             animate={screenWidth >= 1024 ? h2 : ""}
           >
             Each Project has a unique piece of development
@@ -201,18 +157,24 @@ function Projects() {
                 src={ecommerce}
                 alt=""
                 className="absolute w-[95%] rounded-lg "
+                variants={fromLeft}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? card1 : ""}
               />
             </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
+                variants={fromRight}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? title1 : ""}
               >
                 E-commerce website
               </motion.p>
               <motion.p
                 className="my-3 text-sm text-white text-center lg:text-start"
+                variants={fromRight}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? title1 : ""}
               >
                 E-commerce website with an admin interface using HTML, CSS,
@@ -248,18 +210,24 @@ function Projects() {
                 src={taguroAppBg}
                 alt=""
                 className="absolute top-0 "
+                variants={fromLeft}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? card2 : ""}
               />
             </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
+                variants={fromRight}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? title2 : ""}
               >
                 Tutor Finding App
               </motion.p>
               <motion.p
                 className="my-3 text-sm text-white text-center lg:text-start"
+                variants={fromRight}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? title2 : ""}
               >
                 Mobile application using React Native and Firebase. It is a
@@ -296,18 +264,24 @@ function Projects() {
                 src={mathAppBg}
                 alt=""
                 className="absolute w-[85%] left-5 -top-[10%]"
+                variants={fromLeft}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? card3 : ""}
               />
             </div>
             <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-2xl text-white "
+                variants={fromRight}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? title3 : ""}
               >
                 Math Quiz Mobile App
               </motion.p>
               <motion.p
                 className="my-3 text-sm text-white text-center lg:text-start"
+                variants={fromRight}
+                initial="hidden"
                 animate={screenWidth >= 1024 ? title3 : ""}
               >
                 Mobile game using Android Studio and SQL. It is a math quiz game
