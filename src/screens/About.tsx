@@ -95,7 +95,7 @@ function About() {
           className="text-md lg:text-xl font-bold mb-3 text-brightRed"
           // animate={screenWidth >= 1024 ? h1 : ""}
           variants={fromLeft}
-          initial="hidden"
+          initial={screenWidth >= 1024 ? "hidden" : ""}
           animate={screenWidth >= 1024 ? h1 : ""}
         >
           ABOUT ME
@@ -104,7 +104,7 @@ function About() {
           className="ml-2"
           // animate={screenWidth >= 1024 ? h2 : ""}
           variants={fromRight}
-          initial="hidden"
+          initial={screenWidth >= 1024 ? "hidden" : ""}
           animate={screenWidth >= 1024 ? h2 : ""}
         >
           <p className="text-2xl lg:text-3xl font-semibold mb-3 ">
@@ -126,7 +126,7 @@ function About() {
             <motion.a
               custom={0}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="HTML"
@@ -141,7 +141,7 @@ function About() {
             <motion.a
               custom={1}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg "
               title="CSS"
@@ -156,7 +156,7 @@ function About() {
             <motion.a
               custom={2}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="JavaScript"
@@ -171,7 +171,7 @@ function About() {
             <motion.a
               custom={3}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="ReactJs"
@@ -186,7 +186,7 @@ function About() {
             <motion.a
               custom={3}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               className="drop-shadow-lg"
               title="Tailwind CSS"
@@ -199,7 +199,7 @@ function About() {
           <motion.div
             className="flex items-center"
             variants={fromLeft}
-            initial="hidden"
+            initial={screenWidth >= 1024 ? "hidden" : ""}
             animate={screenWidth >= 1024 ? h1 : ""}
           >
             <p className="font-bold text-sm lg:text-lg">Tech Stack</p>

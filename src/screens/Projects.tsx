@@ -129,7 +129,7 @@ function Projects() {
         <motion.p
           className="text-md lg:text-xl font-bold mb-3 text-brightRed"
           variants={fromLeft}
-          initial="hidden"
+          initial={screenWidth >= 1024 ? "hidden" : ""}
           animate={screenWidth >= 1024 ? h1 : ""}
         >
           PROJECTS
@@ -139,7 +139,7 @@ function Projects() {
           <motion.p
             className="text-2xl lg:text-3xl font-bold "
             variants={fromRight}
-            initial="hidden"
+            initial={screenWidth >= 1024 ? "hidden" : ""}
             animate={screenWidth >= 1024 ? h2 : ""}
           >
             Each Project has a unique piece of development
@@ -156,7 +156,7 @@ function Projects() {
                 loading="lazy"
                 className="max-w-[80%] rounded-lg "
                 variants={fromLeft}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? card1 : ""}
               />
             </div>
@@ -164,7 +164,7 @@ function Projects() {
               <motion.p
                 className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? title1 : ""}
               >
                 E-commerce website
@@ -172,7 +172,7 @@ function Projects() {
               <motion.p
                 className="my-3 text-sm lg:text-xl text-white text-center lg:text-start"
                 variants={fromRight}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? title1 : ""}
               >
                 E-commerce website with an admin interface using HTML, CSS,
@@ -210,7 +210,7 @@ function Projects() {
                 loading="lazy"
                 className="max-w-[80%] top-0 "
                 variants={fromLeft}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? card2 : ""}
               />
             </div>
@@ -218,7 +218,7 @@ function Projects() {
               <motion.p
                 className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? title2 : ""}
               >
                 Tutor Finding App
@@ -226,7 +226,7 @@ function Projects() {
               <motion.p
                 className="my-3 text-sm lg:text-xl text-white text-center lg:text-start"
                 variants={fromRight}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? title2 : ""}
               >
                 Mobile application using React Native and Firebase. It is a
@@ -265,7 +265,7 @@ function Projects() {
                 loading="lazy"
                 className="max-w-[60%] top-0 "
                 variants={fromLeft}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? card3 : ""}
               />
             </div>
@@ -273,7 +273,7 @@ function Projects() {
               <motion.p
                 className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? title3 : ""}
               >
                 Math Quiz Mobile App
@@ -281,7 +281,7 @@ function Projects() {
               <motion.p
                 className="my-3 text-sm lg:text-xl text-white text-center lg:text-start"
                 variants={fromRight}
-                initial="hidden"
+                initial={screenWidth >= 1024 ? "hidden" : ""}
                 animate={screenWidth >= 1024 ? title3 : ""}
               >
                 Mobile game using Android Studio and SQL. It is a math quiz game

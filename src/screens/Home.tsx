@@ -140,7 +140,7 @@ function Home() {
           <motion.div
             // animate={screenWidth >= 1024 ? h1 : ""}
             variants={fromLeft}
-            initial="hidden"
+            initial={screenWidth >= 1024 ? "hidden" : ""}
             animate={screenWidth >= 1024 ? h1 : ""}
             className="flex flex-col lg:block justify-center gap-2 lg:gap-0"
           >
@@ -163,7 +163,7 @@ function Home() {
           <motion.div
             // animate={screenWidth >= 1024 ? h2 : ""}
             variants={fromLeft}
-            initial="hidden"
+            initial={screenWidth >= 1024 ? "hidden" : ""}
             animate={screenWidth >= 1024 ? h2 : ""}
             className=" w-3/4 lg:w-auto"
           >
@@ -195,7 +195,7 @@ function Home() {
               custom={0}
               // animate={screenWidth >= 1024 ? link : ""}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               href="https://www.facebook.com/shaclonely"
               className="drop-shadow-lg"
@@ -213,7 +213,7 @@ function Home() {
             <motion.a
               custom={1}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               href="https://twitter.com/kdmendoza00"
               className="drop-shadow-lg"
@@ -231,7 +231,7 @@ function Home() {
             <motion.a
               custom={2}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               href="https://www.instagram.com/kyleemndz/"
               className="drop-shadow-lg"
@@ -249,7 +249,7 @@ function Home() {
             <motion.a
               custom={3}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               href="https://www.linkedin.com/in/kyleemendoza"
               className="drop-shadow-lg"
@@ -267,7 +267,7 @@ function Home() {
             <motion.a
               custom={4}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               href="https://github.com/KyleeMendoza"
               className="drop-shadow-lg"
@@ -285,7 +285,7 @@ function Home() {
             <motion.a
               custom={5}
               variants={fromLeftLink}
-              initial="hidden"
+              initial={screenWidth >= 1024 ? "hidden" : ""}
               animate={screenWidth >= 1024 ? link : ""}
               href="https://medium.com/@kylemendoza67"
               className="drop-shadow-lg"
@@ -304,7 +304,7 @@ function Home() {
         </div>
         <motion.div
           variants={fromRight}
-          initial="hidden"
+          initial={screenWidth >= 1024 ? "hidden" : ""}
           animate={screenWidth >= 1024 ? heroBg : ""}
           className="hidden flex-1 lg:relative lg:flex items-center justify-center "
         >
