@@ -91,15 +91,15 @@ html {
 
 .groceryBg {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-    url("./assets/grocery-bg.png") no-repeat center/cover;
+    url("./assets/grocery-bg-sm.png") no-repeat center/cover;
 }
 .OnlineClassBg {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-    url("./assets/onlineClassBg.png") no-repeat center/cover;
+    url("./assets/onlineClassBg-sm.png") no-repeat center/cover;
 }
 .mathBg {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-    url("./assets/mathBg.png") no-repeat center/cover;
+    url("./assets/mathBg-sm.png") no-repeat center/cover;
 }
 .ecommerceBg {
   background: url("./assets/ecommerce.png") no-repeat center/cover;

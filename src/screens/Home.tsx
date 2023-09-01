@@ -131,12 +131,12 @@ function Home() {
   }, []);
 
   return (
-    <div className="flex w-full h-full justify-center items-center border-2 border-red-600">
+    <div className="flex w-full h-full justify-center items-center ">
       <div
         ref={ref}
-        className="flex flex-col-reverse lg:flex-row w-[100%] lg:max-w-[80%] border-2 border-blue-600"
+        className="flex flex-col-reverse lg:flex-row w-[100%] lg:max-w-[80%] "
       >
-        <div className="z-10 flex flex-col gap-1 lg:gap-0 items-center lg:items-start text-center lg:text-start lg:w-[50%] font-['Poppins'] font-bold text-darkBlue border-2 border-green-600">
+        <div className="z-10 flex flex-col gap-1 lg:gap-0 items-center lg:items-start text-center lg:text-start lg:w-[50%] font-['Poppins'] font-bold text-darkBlue ">
           <motion.div
             // animate={screenWidth >= 1024 ? h1 : ""}
             variants={fromLeft}
@@ -176,14 +176,14 @@ function Home() {
             <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6">
               <a
                 href="#about"
-                className="hidden lg:block transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs lg:text-xl font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
+                className="hidden lg:block transition-all delay-50 cursor-pointer border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs lg:text-xl font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
               >
                 About Me
               </a>
               <a
                 download="Mendoza, Kyle Dominic L. - Resume.pdf"
                 href={resume}
-                className="block lg:hidden transition-all delay-50 cursor-pointer border border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
+                className="block lg:hidden transition-all delay-50 cursor-pointer border-2 border-black font-['poppins'] rounded-sm px-4 py-2 text-xs font-bold text-brightRed hover:bg-brightRed hover:text-white hover:border-brightRed hover:drop-shadow-lg uppercase"
               >
                 Download CV
               </a>

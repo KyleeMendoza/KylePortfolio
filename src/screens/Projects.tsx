@@ -124,11 +124,8 @@ function Projects() {
   }, []);
 
   return (
-    <div
-      ref={refBody}
-      className="flex justify-center items-center border-2 border-red-600"
-    >
-      <div className="w-[90%] lg:max-w-[80%] font-['Poppins'] text-darkBlue border-2 border-blue-600">
+    <div ref={refBody} className="flex justify-center items-center ">
+      <div className="w-[90%] lg:max-w-[80%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-md lg:text-xl font-bold mb-3 text-brightRed"
           variants={fromLeft}
@@ -152,17 +149,18 @@ function Projects() {
             className="flex flex-col gap-4 lg:flex-row py-16 lg:py-20 px-4 lg:px-16 rounded-lg my-10 shadow-middle groceryBg "
             ref={refCard1}
           >
-            <div className="border-2 border-red-600 hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
+            <div className=" hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
               <motion.img
                 src={ecommerce}
                 alt=""
+                loading="lazy"
                 className="max-w-[80%] rounded-lg "
                 variants={fromLeft}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? card1 : ""}
               />
             </div>
-            <div className="flex-1 border-2 border-red-600">
+            <div className="flex-1 ">
               <motion.p
                 className="text-center font-bold text-3xl text-white "
                 variants={fromRight}
@@ -205,10 +203,11 @@ function Projects() {
             className="flex flex-col gap-4 lg:flex-row py-16 lg:py-20 px-4 lg:px-16 rounded-lg my-10 shadow-middle OnlineClassBg"
             ref={refCard2}
           >
-            <div className="border-2 border-red-600 hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
+            <div className=" hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
               <motion.img
                 src={taguroAppBg}
                 alt=""
+                loading="lazy"
                 className="max-w-[80%] top-0 "
                 variants={fromLeft}
                 initial="hidden"
@@ -259,11 +258,12 @@ function Projects() {
             className="flex flex-col gap-4 lg:flex-row py-16 lg:py-20 px-4 lg:px-16 rounded-lg my-10 shadow-middle mathBg"
             ref={refCard3}
           >
-            <div className="border-2 border-red-600 hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
+            <div className=" hidden lg:flex relative flex-1 rounded-lg justify-center items-center">
               <motion.img
                 src={mathAppBg}
                 alt=""
-                className="max-w-[80%] top-0 "
+                loading="lazy"
+                className="max-w-[60%] top-0 "
                 variants={fromLeft}
                 initial="hidden"
                 animate={screenWidth >= 1024 ? card3 : ""}

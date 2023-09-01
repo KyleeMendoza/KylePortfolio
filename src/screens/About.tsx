@@ -89,11 +89,8 @@ function About() {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className="flex h-full justify-center items-center border-2 border-blue-600"
-    >
-      <div className="w-[90%] lg:max-w-[60%] font-['Poppins'] text-darkBlue border-2 border-red-600">
+    <div ref={ref} className="flex h-full justify-center items-center ">
+      <div className="w-[90%] lg:max-w-[60%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-md lg:text-xl font-bold mb-3 text-brightRed"
           // animate={screenWidth >= 1024 ? h1 : ""}
@@ -125,7 +122,7 @@ function About() {
           </p>
         </motion.div>
         <div className="flex flex-row-reverse">
-          <div className="flex gap-3 ml-4 pl-4 border-l-4 border-brightRed ml-4">
+          <div className="flex gap-3 pl-4 border-l-4 border-brightRed ml-4">
             <motion.a
               custom={0}
               variants={fromLeftLink}
