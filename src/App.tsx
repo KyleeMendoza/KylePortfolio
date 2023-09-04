@@ -67,7 +67,7 @@ function App() {
               </div>
             </body>
           </div>
-          <div className="lg:h-[50vh] h-[70vh]" id="about">
+          <div className="lg:h-[60vh] h-[70vh]" id="about">
             <About />
           </div>
           <div className=" glass-bg pt-10 lg:py-20" id="projects">

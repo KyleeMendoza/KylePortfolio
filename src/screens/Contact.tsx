@@ -38,7 +38,7 @@ function Contact() {
     <div className="relative flex flex-col h-full items-center justify-center bg-black ">
       <div className="flex w-full lg:max-w-[80%] font-['Poppins'] font-bold text-white">
         <div className="flex flex-col gap-5 items-center lg:items-start justify-center flex-1 ">
-          <div className="pt-2 text-xl lg:text-3xl text-center lg:text-start ">
+          <div className="pt-2 text-xl lg:text-2xl text-center lg:text-start ">
             <p>Feel free to hit me up. I'm looking</p>
             <p>forward to hearing from you.</p>
           </div>
@@ -126,7 +126,7 @@ function Contact() {
         <div className="hidden lg:flex flex-1 items-center justify-end ">
           <div className="flex flex-col">
             <img src={Logo} alt="logo" className="w-36 h-36" />
-            <p className="text-xl lg:text-3xl ml-3">
+            <p className="text-xl lg:text-2xl ml-3">
               kyledominicmendoza@gmail.com
             </p>
           </div>

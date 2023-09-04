@@ -124,7 +124,7 @@ function Projects() {
   }, []);
 
   return (
-    <div ref={refBody} className="flex justify-center items-center ">
+    <div ref={refBody} className="flex justify-center items-center">
       <div className="w-[90%] lg:max-w-[80%] font-['Poppins'] text-darkBlue ">
         <motion.p
           className="text-md lg:text-xl font-bold mb-3 text-brightRed"
