@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KylePortfolio/static/css/main.95f6a1c3.css",
-    "main.js": "/KylePortfolio/static/js/main.5f74c19b.js",
+    "main.css": "/KylePortfolio/static/css/main.31fd2d7c.css",
+    "main.js": "/KylePortfolio/static/js/main.63019d96.js",
     "static/js/787.b6f1e7c5.chunk.js": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js",
     "static/media/ecommerce.png": "/KylePortfolio/static/media/ecommerce.2c7fb213fd9acd62f64f.png",
     "static/media/bg-hero.png": "/KylePortfolio/static/media/bg-hero.97badc10f3b346852743.png",
@@ -12,12 +12,12 @@
     "static/media/grocery-bg-sm.png": "/KylePortfolio/static/media/grocery-bg-sm.6d61021815c3e3037509.png",
     "static/media/mathBg-sm.png": "/KylePortfolio/static/media/mathBg-sm.41a0d2d47d1fa651b076.png",
     "index.html": "/KylePortfolio/index.html",
-    "main.95f6a1c3.css.map": "/KylePortfolio/static/css/main.95f6a1c3.css.map",
-    "main.5f74c19b.js.map": "/KylePortfolio/static/js/main.5f74c19b.js.map",
+    "main.31fd2d7c.css.map": "/KylePortfolio/static/css/main.31fd2d7c.css.map",
+    "main.63019d96.js.map": "/KylePortfolio/static/js/main.63019d96.js.map",
     "787.b6f1e7c5.chunk.js.map": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95f6a1c3.css",
-    "static/js/main.5f74c19b.js"
+    "static/css/main.31fd2d7c.css",
+    "static/js/main.63019d96.js"
   ]
 }
