@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/KylePortfolio/static/css/main.31fd2d7c.css",
-    "main.js": "/KylePortfolio/static/js/main.63019d96.js",
+    "main.js": "/KylePortfolio/static/js/main.a21eac14.js",
     "static/js/787.b6f1e7c5.chunk.js": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js",
     "static/media/ecommerce.png": "/KylePortfolio/static/media/ecommerce.2c7fb213fd9acd62f64f.png",
     "static/media/bg-hero.png": "/KylePortfolio/static/media/bg-hero.97badc10f3b346852743.png",
-    "static/media/Resume.pdf": "/KylePortfolio/static/media/Resume.88ce51eeae2c2be1c184.pdf",
+    "static/media/Resume.pdf": "/KylePortfolio/static/media/Resume.f5641ebe4b1195cbcd5a.pdf",
     "static/media/mathApp.png": "/KylePortfolio/static/media/mathApp.5c33fb996b6428965bb8.png",
     "static/media/onlineClassBg-sm.png": "/KylePortfolio/static/media/onlineClassBg-sm.55d3074fda016bb26e25.png",
     "static/media/taguroApp.png": "/KylePortfolio/static/media/taguroApp.863ccfa00bcae79890a0.png",
@@ -13,11 +13,11 @@
     "static/media/mathBg-sm.png": "/KylePortfolio/static/media/mathBg-sm.41a0d2d47d1fa651b076.png",
     "index.html": "/KylePortfolio/index.html",
     "main.31fd2d7c.css.map": "/KylePortfolio/static/css/main.31fd2d7c.css.map",
-    "main.63019d96.js.map": "/KylePortfolio/static/js/main.63019d96.js.map",
+    "main.a21eac14.js.map": "/KylePortfolio/static/js/main.a21eac14.js.map",
     "787.b6f1e7c5.chunk.js.map": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31fd2d7c.css",
-    "static/js/main.63019d96.js"
+    "static/js/main.a21eac14.js"
   ]
 }
