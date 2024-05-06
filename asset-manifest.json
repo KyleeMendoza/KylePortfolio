@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/KylePortfolio/static/css/main.1f6a7f4c.css",
+    "main.js": "/KylePortfolio/static/js/main.06b54018.js",
+    "static/js/787.b6f1e7c5.chunk.js": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js",
+    "static/media/foodBud.png": "/KylePortfolio/static/media/foodBud.9ac2fee4681286d61a6c.png",
+    "static/media/dental.png": "/KylePortfolio/static/media/dental.89577298817e268fe358.png",
+    "static/media/ecommerce.png": "/KylePortfolio/static/media/ecommerce.2c7fb213fd9acd62f64f.png",
+    "static/media/bg-hero.png": "/KylePortfolio/static/media/bg-hero.97badc10f3b346852743.png",
+    "static/media/mathApp.png": "/KylePortfolio/static/media/mathApp.5c33fb996b6428965bb8.png",
+    "static/media/onlineClassBg-sm.png": "/KylePortfolio/static/media/onlineClassBg-sm.55d3074fda016bb26e25.png",
+    "static/media/taguroApp.png": "/KylePortfolio/static/media/taguroApp.863ccfa00bcae79890a0.png",
+    "static/media/grocery-bg-sm.png": "/KylePortfolio/static/media/grocery-bg-sm.6d61021815c3e3037509.png",
+    "static/media/mathBg-sm.png": "/KylePortfolio/static/media/mathBg-sm.41a0d2d47d1fa651b076.png",
+    "static/media/ppdms.png": "/KylePortfolio/static/media/ppdms.de01eaf6aeb1add1679b.png",
+    "static/media/profiling.png": "/KylePortfolio/static/media/profiling.fc5b47eba4eeea2ce060.png",
+    "static/media/budgeting.png": "/KylePortfolio/static/media/budgeting.7993d1d3b64396d1e167.png",
+    "static/media/Resume.pdf": "/KylePortfolio/static/media/Resume.d4bf39a654f1376dce46.pdf",
+    "index.html": "/KylePortfolio/index.html",
+    "main.1f6a7f4c.css.map": "/KylePortfolio/static/css/main.1f6a7f4c.css.map",
+    "main.06b54018.js.map": "/KylePortfolio/static/js/main.06b54018.js.map",
+    "787.b6f1e7c5.chunk.js.map": "/KylePortfolio/static/js/787.b6f1e7c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f6a7f4c.css",
+    "static/js/main.06b54018.js"
+  ]
+}
