@@ -167,11 +167,19 @@ function Home() {
             animate={screenWidth >= 1024 ? h2 : ""}
             className=" w-3/4 lg:w-auto"
           >
-            <p className="text-md lg:text-xl font-semibold mt-4">
+            {/* <p className="text-md lg:text-xl font-semibold mt-4">
               I'm <span className="text-brightRed">Kyle Mendoza</span>, a
               passionate and aspiring software developer based in Pasig. I have
               experience in building web and mobile applications using
               JavaScript, React, and other libraries and frameworks.
+            </p> */}
+            <p className="text-md lg:text-xl font-semibold mt-4">
+              I'm <span className="text-brightRed">Kyle Mendoza</span>, a web
+              developer. I specialize in creating web and mobile applications
+              using React, along with various other libraries and frameworks.
+              Additionally, I have experience working on the backend with
+              Express JS, and I'm well-versed in utilizing cloud services such
+              as AWS and nginx.
             </p>
             <div className="flex justify-center lg:justify-normal items-center mt-3 mb-6">
               <a

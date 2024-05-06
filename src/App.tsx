@@ -77,7 +77,7 @@ function App() {
             <Contact />
             <div className="hidden lg:block absolute top-[60%] right-[48%] ">
               <IconButton
-                className="p-4 rounded-full bg-black block border border-2 border-white"
+                className="p-4 rounded-full bg-black block border-2 border-white"
                 size="lg"
                 onClick={() => {
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
