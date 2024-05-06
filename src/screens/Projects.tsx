@@ -51,11 +51,7 @@ function Projects() {
       image: foodBud,
       title: "FoodBud - Food Catering Website",
       description: `
-      Mobile application using React Native and Firebase. It is a
-      tutor finding app that allows users to find tutors, message
-      them, schedule video calls, and book appointments. The app also
-      includes a machine learning face verification system to ensure
-      that users and tutors are who they say they are.
+      This website is built using React.js, with the primary purpose of catering to clients who want to avail themselves of catering services for various events. Clients can book events and choose their package according to their preferences. The website also includes an admin side that accepts or rejects bookings.
     `,
       stack: ["React", "Tailwind", "Sql", "AWS"],
       link: "",
@@ -64,11 +60,8 @@ function Projects() {
       image: profiling,
       title: "Profile Repository Website",
       description: `
-      Mobile application using React Native and Firebase. It is a
-      tutor finding app that allows users to find tutors, message
-      them, schedule video calls, and book appointments. The app also
-      includes a machine learning face verification system to ensure
-      that users and tutors are who they say they are.
+      
+The primary objective of this website is to facilitate the storage and management of individuals' profiles across various categories, specifically focusing on their classification as drug-related persons. Developed as a project proposal intended for local government utilization, this platform offers comprehensive CRUD functionality. It enables the systematic recording and tracking of individuals who have been identified or labeled as being involved in drug-related activities.
     `,
       stack: ["React", "Tailwind", "Sql", "AWS"],
       link: "https://github.com/KyleeMendoza/firebaseWebrtc",
@@ -77,11 +70,8 @@ function Projects() {
       image: dental,
       title: "Dental Appointment Website",
       description: `
-      Mobile application using React Native and Firebase. It is a
-      tutor finding app that allows users to find tutors, message
-      them, schedule video calls, and book appointments. The app also
-      includes a machine learning face verification system to ensure
-      that users and tutors are who they say they are.
+      
+This website is designed for a small dental clinic to streamline client bookings and appointments online. Users can conveniently schedule appointments via the platform, selecting their specific purpose for the visit. Additionally, they can track their dental procedures through an interactive teeth SVG, which they can hover over to view details of the treatment received. The website also includes an administrative interface for managing appointments, allowing staff to accept or decline bookings.
     `,
       stack: ["React", "Tailwind", "Sql", "AWS"],
       link: "https://github.com/KyleeMendoza/firebaseWebrtc",
@@ -90,11 +80,7 @@ function Projects() {
       image: ppdms,
       title: "Poultry Management System",
       description: `
-      Mobile application using React Native and Firebase. It is a
-      tutor finding app that allows users to find tutors, message
-      them, schedule video calls, and book appointments. The app also
-      includes a machine learning face verification system to ensure
-      that users and tutors are who they say they are.
+      This website serves as a platform for monitoring online poultry sales and accessing insightful statistics pertaining to egg and chicken sales within a poultry farm. With role-based authentication implemented, transparency is ensured by providing role-specific access to relevant information. Only superadmins possess the authority to export crucial data, maintaining control over the dissemination of sensitive information.
     `,
       stack: ["React", "Tailwind", "Sql", "AWS"],
       link: "https://github.com/KyleeMendoza/firebaseWebrtc",
@@ -103,11 +89,8 @@ function Projects() {
       image: budgeting,
       title: "Finance Tracker App",
       description: `
-      Mobile application using React Native and Firebase. It is a
-      tutor finding app that allows users to find tutors, message
-      them, schedule video calls, and book appointments. The app also
-      includes a machine learning face verification system to ensure
-      that users and tutors are who they say they are.
+   
+This mobile application caters to users seeking to meticulously track their expenses across various categories. Offering a comprehensive suite of features, it provides insights into projected expenses based on users' past entries, filtered according to different timeframes. Additionally, the app empowers users to visualize their expenditure patterns through diverse types of graphs, facilitating a deeper understanding of their financial habits.
     `,
       stack: ["Expo", "React Native", "Sql"],
       link: "https://github.com/KyleeMendoza/firebaseWebrtc",
